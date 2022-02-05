@@ -6,7 +6,7 @@ title: 2.10 More on Finite Element Methods
 uid: 365c70a7-4666-ed1c-d140-8aeb96bff4a6
 ---
 
-*   [<More on Finite Element Methods]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/more-on-finite-element-methods)
+*   [\<More on Finite Element Methods]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/more-on-finite-element-methods)
 *   [2.10.1Gaussian Quadrature]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/more-on-finite-element-methods)
 *   [2.10.2Boundary Conditions for Finite Elements]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/more-on-finite-element-methods/1690r-boundary-conditions-for-finite-elements)
 *   [\>The Finite Element Method for Two-Dimensional Diffusion]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/the-finite-element-method-for-two-dimensional-diffusion)
@@ -30,49 +30,159 @@ Convection Boundary Condition for Heat Transfer
 
 Consider the flow of air over a solid object with the velocity and temperature of the external air being \\(U\_{ext}\\) and \\(T\_{ext}\\), respectively. Aligning the \\(x\\)-direction into the surface of the object, then the heat transfer rate at the surface is
 
-| \\\[q\_{wall} = -k T\_ x, \\label{equ:qwall}\\\] | (2.246) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[q\_{wall} = -k T\_ x, \\label{equ:qwall}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.246)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(T(x)\\) is the temperature inside the solid and \\(k\\) is the thermal conductivity of the solid. A common approach to modeling the heat transfer into the solid as a result of the airflow is based on specifying a heat transfer coefficient for the airflow, \\(h\_{ext}\\), which is related to the heat transfer rate by
 
-| \\\[h\_{ext} \\equiv \\frac{q\_{wall}}{T\_{ext}-T\_{wall}}. \\label{equ:hdef}\\\] | (2.247) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[h\_{ext} \\equiv \\frac{q\_{wall}}{T\_{ext}-T\_{wall}}. \\label{equ:hdef}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.247)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Note that \\(h\_{ext}\\) is generally a function of the external velocity and other flow properties. Combining Equations ([2.246](javascript: void(0))) and ([2.247](javascript: void(0))) gives the following boundary condition at the surface of the solid,
 
-| \\\[-k T\_ x = h\_{ext}\\left(T\_{ext}-T\_{wall}\\right), \\label{equ:convectbc}\\\] | (2.248) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[-k T\_ x = h\_{ext}\\left(T\_{ext}-T\_{wall}\\right), \\label{equ:convectbc}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.248)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(T\_{wall}\\) is the temperature of the solid at its surface. This equation can be re-arranged into the Robin boundary condition form,
 
-| \\\[-k T\_ x + h\_{ext} T\_{wall} = h\_{ext}T\_{ext}.\\\] | (2.249) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[-k T\_ x + h\_{ext} T\_{wall} = h\_{ext}T\_{ext}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.249)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Implementation of Dirichlet Boundary Conditions
 -----------------------------------------------
 
 To demonstrate the implementation of a Dirichlet boundary condition, suppose that the value of the temperature is known at \\(x=-L/2\\), specifically,
 
-| \\\[T(-L/2) = T\_{left}.\\\] | (2.250) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[T(-L/2) = T\_{left}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.250)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 This condition is set by forcing the corresponding nodal degree of freedom to be the desired value. At \\(x=-L/2\\), the corresponding nodal degree of freedom would be \\(a\_1\\) (the value of the temperature at the first node), thus, the boundary condition is implemented as
 
-| \\\[a\_1 = T\_{left}.\\\] | (2.251) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[a\_1 = T\_{left}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.251)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Implementation of Neumann Boundary Conditions
 ---------------------------------------------
 
 To demonstrate the implementation of a Neumann boundary condition, suppose that the heat transfer rate is known at \\(x=L/2\\), specifically,
 
-| \\\[-k T\_ x(L/2) = q\_{right}.\\\] | (2.252) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[-k T\_ x(L/2) = q\_{right}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.252)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 This condition is enforced through the weighted residual for the last node, \\(i=N+1\\). Specifically,
 
-| \\\[R\_{N+1} = \\left\[\\phi \_{N+1}\\, k \\tilde{T}\_ x\\right\]^{L/2}\_{-L/2} - \\int \_{-L/2}^{L/2} {\\phi \_{N+1}}\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{-L/2}^{L/2} \\phi \_{N+1} f\\, dx.\\\] | (2.253) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[R\_{N+1} = \\left\[\\phi \_{N+1}\\, k \\tilde{T}\_ x\\right\]^{L/2}\_{-L/2} - \\int \_{-L/2}^{L/2} {\\phi \_{N+1}}\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{-L/2}^{L/2} \\phi \_{N+1} f\\, dx.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.253)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Because \\(\\phi \_{N+1}(x)\\) is zero except in the last element, this weighted residual reduces to
 
-| \\\[R\_{N+1} = \\left.\\left(\\phi \_{N+1} k \\tilde{T}\_ x\\right)\\right&#124;\_{x=x\_{N+1}} - \\int \_{x\_{N}}^{x\_{N+1}} {\\phi \_{N+1}}\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{x\_{N}}^{x\_{N+1}} \\phi \_{N+1} f\\, dx.\\\] | (2.254) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[R\_{N+1} = \\left.\\left(\\phi \_{N+1} k \\tilde{T}\_ x\\right)\\right|\_{x=x\_{N+1}} - \\int \_{x\_{N}}^{x\_{N+1}} {\\phi \_{N+1}}\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{x\_{N}}^{x\_{N+1}} \\phi \_{N+1} f\\, dx.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.254)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The two integral terms are calculated in the standard manner. The first term is where the Neumann boundary condition is set through substitution of \\(-k \\tilde{T}\_ x = q\_{right}\\). Specifically, the weighted residual becomes
 
-| \\\[R\_{N+1} = -\\phi \_{N+1}(x\_{N+1})q\_{right} - \\int \_{x\_{N}}^{x\_{N+1}} {\\phi \_{N+1}}\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{x\_{N}}^{x\_{N+1}} \\phi \_{N+1} f\\, dx.\\\] | (2.255) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[R\_{N+1} = -\\phi \_{N+1}(x\_{N+1})q\_{right} - \\int \_{x\_{N}}^{x\_{N+1}} {\\phi \_{N+1}}\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{x\_{N}}^{x\_{N+1}} \\phi \_{N+1} f\\, dx.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.255)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Note that the boundary term, \\(-\\phi \_{N+1}(x\_{N+1})q\_{right}\\) does not depend on the temperature and thus this boundary condition does not impact the stiffness matrix.
 
@@ -81,15 +191,48 @@ Implementation of Robin Boundary Conditions
 
 To demonstrate the implementation of a Robin boundary condition, suppose that a convective heat transfer boundary condition were to be set at \\(x=L/2\\), specifically,
 
-| \\\[-k T\_ x(L/2) = h\_{ext}\\left\[T\_{ext}-T(L/2)\\right\].\\\] | (2.256) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[-k T\_ x(L/2) = h\_{ext}\\left\[T\_{ext}-T(L/2)\\right\].\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.256)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Following the basic process outlined in the Neumann boundary condition, the weighted residual for \\(i=N+1\\) is
 
-| \\\[R\_{N+1} = \\left.\\left(\\phi \_{N+1} k \\tilde{T}\_ x\\right)\\right&#124;\_{x=x\_{N+1}} - \\int \_{x\_{N}}^{x\_{N+1}} {\\phi \_{N+1}}\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{x\_{N}}^{x\_{N+1}} \\phi \_{N+1} f\\, dx.\\\] | (2.257) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[R\_{N+1} = \\left.\\left(\\phi \_{N+1} k \\tilde{T}\_ x\\right)\\right|\_{x=x\_{N+1}} - \\int \_{x\_{N}}^{x\_{N+1}} {\\phi \_{N+1}}\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{x\_{N}}^{x\_{N+1}} \\phi \_{N+1} f\\, dx.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.257)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Substituting \\(-k \\tilde{T}\_ x = h\_{ext}\\left\[T\_{ext}-\\tilde{T}(x\_{N+1})\\right\]\\) in the boundary term gives
 
-| \\\[R\_{N+1} = -\\phi \_{N+1}(x\_{N+1})h\_{ext}\\left\[T\_{ext}-\\tilde{T}(x\_{N+1})\\right\] - \\int \_{x\_{N}}^{x\_{N+1}} {\\phi \_{N+1}}\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{x\_{N}}^{x\_{N+1}} \\phi \_{N+1} f\\, dx.\\\] | (2.258) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[R\_{N+1} = -\\phi \_{N+1}(x\_{N+1})h\_{ext}\\left\[T\_{ext}-\\tilde{T}(x\_{N+1})\\right\] - \\int \_{x\_{N}}^{x\_{N+1}} {\\phi \_{N+1}}\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{x\_{N}}^{x\_{N+1}} \\phi \_{N+1} f\\, dx.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.258)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 As opposed to the Neumann boundary condition, the Robin boundary condition implementation does introduce a new dependence on the solution, specifically on \\(\\tilde{T}(x\_{N+1})\\). This will cause a change in the stiffness matrix. Furthermore, the \\(T\_{ext}\\) term will alter the right-hand side vector in the FEM numerical implementation.
 

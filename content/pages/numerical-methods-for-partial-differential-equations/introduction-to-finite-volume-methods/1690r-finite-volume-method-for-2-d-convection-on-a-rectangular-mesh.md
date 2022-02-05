@@ -6,7 +6,7 @@ title: 2.5 Introduction to Finite Volume Methods
 uid: a9d8dcc7-e873-f01e-6dc3-6f07884b2f23
 ---
 
-*   [<Finite Volume Method in 2-D]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-volume-methods/1690r-finite-volume-method-in-2-d)
+*   [\<Finite Volume Method in 2-D]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-volume-methods/1690r-finite-volume-method-in-2-d)
 *   [2.5.1Finite Volume Method in 1-D]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-volume-methods)
 *   [2.5.2Finite Volume Method Applied to 1-D Convection]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-volume-methods/1690r-finite-volume-method-applied-to-1-d-convection)
 *   [2.5.3Finite Volume Method in 2-D]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-volume-methods/1690r-finite-volume-method-in-2-d)
@@ -94,7 +94,7 @@ t = 0;
 
 
 % Loop until t > tfinal
-while (t < tfinal),
+while (t \< tfinal),
 
   % The following implement the bc's by creating a larger array
   % for U and putting the appropriate values in the first and last

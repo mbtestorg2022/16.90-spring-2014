@@ -6,7 +6,7 @@ title: 3.3 Monte Carlo Methods
 uid: e4ed709d-1333-d460-e932-cde246cff19f
 ---
 
-*   [<Monte Carlo Methods]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/monte-carlo-methods)
+*   [\<Monte Carlo Methods]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/monte-carlo-methods)
 *   [3.3.1Introduction]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/monte-carlo-methods)
 *   [3.3.2Monte Carlo Analysis]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/monte-carlo-methods/1690r-monte-carlo-analysis)
 *   [3.3.3Monte Carlo Example]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/monte-carlo-methods/1690r-monte-carlo-example)
@@ -30,7 +30,18 @@ To make our discussion concrete, we will consider a simplified model for the hea
 
 A one-dimensional model of the heat transfer along the dashed line is,
 
-| \\\[\\dot{q} = h\_{gas} (T\_{gas} - T\_{TBC}) \\\\ \\dot{q} = \\frac{k\_{TBC}}{L\_{TBC}} (T\_{TBC} - T\_{mh}) \\\\ \\dot{q} = \\frac{k\_ m}{L\_ m} (T\_{mh} - T\_{mc}) \\\\ \\dot{q} = h\_{cool} (T\_{mc} - T\_{cool})\\\] | (3.23) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\dot{q} = h\_{gas} (T\_{gas} - T\_{TBC}) \\\\ \\dot{q} = \\frac{k\_{TBC}}{L\_{TBC}} (T\_{TBC} - T\_{mh}) \\\\ \\dot{q} = \\frac{k\_ m}{L\_ m} (T\_{mh} - T\_{mc}) \\\\ \\dot{q} = h\_{cool} (T\_{mc} - T\_{cool})\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.23)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(h\_{gas}\\) and \\(h\_{cool}\\) denote the convective heat transfer coefficients of the flow surrounding the blade and the cooling flow inside the blade, respectively. \\(k\_ m\\) is the thermal conductivity of the metal and \\(L\_ m\\) is the blade metal thickness. \\(k\_{TBC}\\) is the thermal conductivity of the thermal barrier coating on the blade and \\(L\_{TBC}\\) is the thickness of the thermal barrier coating. \\(T\\) denotes temperature, where the subscripts are \\(\_{gas}\\) for the flow surrounding the blade, \\(\_{TBC}\\) for the thermal barrier coating, \\(\_{mh}\\) for the metal hot side, \\(\_{mc}\\) for the metal cold side, and \\(\_{cool}\\) for the cooling fluid.
 
@@ -41,11 +52,33 @@ Nominal Analysis of Turbine Blade Heat Transfer
 
 A typical, deterministic analysis of the turbine blade heat transfer problem would assume that all of the input parameters are at their nominal (i.e., design-intent) values. Suppose the design-intent values were,
 
-| \\(\\displaystyle\\hspace{9.9mm}{h\_{gas} = 3000W/(m^2K) \\hspace{.5mm} \\text{,} \\hspace{4mm} h\_{cool} = 1000W/(m^2K)\\hspace{.5mm} \\text{,}\\\\ \\hspace{9.9mm}T\_{gas} = 1500K \\hspace{.5mm} \\text{,} \\hspace{4mm} T\_{cool} = 600K\\hspace{.5mm} \\text{,}\\\\ \\hspace{9.9mm}k\_{TBC} = 1W/(mK) \\hspace{.5mm} \\text{,} \\hspace{4mm} k\_{m} = 20W/(mK)\\hspace{.5mm} \\text{,}\\\\ \\hspace{9.9mm}L\_{TBC} = 0.0005m \\hspace{.5mm} \\text{,} \\hspace{4mm} L\_{m} = 0.003m }\\) | (3.24) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\(\\displaystyle\\hspace{9.9mm}{h\_{gas} = 3000W/(m^2K) \\hspace{.5mm} \\text{,} \\hspace{4mm} h\_{cool} = 1000W/(m^2K)\\hspace{.5mm} \\text{,}\\\\ \\hspace{9.9mm}T\_{gas} = 1500K \\hspace{.5mm} \\text{,} \\hspace{4mm} T\_{cool} = 600K\\hspace{.5mm} \\text{,}\\\\ \\hspace{9.9mm}k\_{TBC} = 1W/(mK) \\hspace{.5mm} \\text{,} \\hspace{4mm} k\_{m} = 20W/(mK)\\hspace{.5mm} \\text{,}\\\\ \\hspace{9.9mm}L\_{TBC} = 0.0005m \\hspace{.5mm} \\text{,} \\hspace{4mm} L\_{m} = 0.003m }\\)
+{{< tdclose >}}
+{{< tdopen >}}
+(3.24)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The results of this design-intent analysis give,
 
-| \\\[T\_{TBC} = 1348.7 K, \\quad T\_{mh} = 1121.8 K, \\quad T\_{mc} = 1053.8 K,\\quad \\dot{q} = 453780 W/m^2\\\] | (3.25) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[T\_{TBC} = 1348.7 K, \\quad T\_{mh} = 1121.8 K, \\quad T\_{mc} = 1053.8 K,\\quad \\dot{q} = 453780 W/m^2\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.25)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Analysis of Turbine Blade Heat Transfer Under Uncertainty
 ---------------------------------------------------------

@@ -6,7 +6,7 @@ title: 3.1 Overview
 uid: 07ccb107-020a-5395-c317-7b0998f3ed49
 ---
 
-*   [<Probabilistic Methods and Optimization]({{< baseurl >}}/pages/probabilistic-methods-and-optimization)
+*   [\<Probabilistic Methods and Optimization]({{< baseurl >}}/pages/probabilistic-methods-and-optimization)
 *   [3.1.1Measurable Outcomes]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/overview4)
 *   [3.1.2Pre-requisite Material]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/overview4/1690r-pre-requisite-material4)
 *   [\>Pre-requisite Material]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/overview4/1690r-pre-requisite-material4)

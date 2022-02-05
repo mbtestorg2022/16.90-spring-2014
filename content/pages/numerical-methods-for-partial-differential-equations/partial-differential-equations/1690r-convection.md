@@ -6,7 +6,7 @@ title: 2.2 Partial Differential Equations
 uid: 5b35a359-99c0-aad1-8b33-6126f6b0a143
 ---
 
-*   [<One-Dimensional Burgers Equation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations/1690r-one-dimensional-burgers-equation)
+*   [\<One-Dimensional Burgers Equation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations/1690r-one-dimensional-burgers-equation)
 *   [2.2.1Conservation Laws in Integral and Differential Form]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations)
 *   [2.2.2One-Dimensional Burgers Equation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations/1690r-one-dimensional-burgers-equation)
 *   [2.2.3Convection]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations/1690r-convection)
@@ -27,40 +27,218 @@ In many applications, especially those in fluid dynamics, convection is the domi
 
 In this section, we will derive the convection equation using the conservation law as given in Equation [2.1](javascript: void(0)). Specifically, let \\(U\\) be the 'conserved' scalar quantity, e.g., mass, energy, momentum, number of atoms or amount of "stuff" per unit volume, per unit area or per unit length. Let the flux of \\(U\\) be given by,
 
-| \\\[\\vec{F} = \\vec{v}U \\label{equ:convection\_ fluxes}\\\] | (2.18) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\vec{F} = \\vec{v}U \\label{equ:convection\_ fluxes}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.18)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(\\vec{v}(\\vec{x},t)\\) is a known velocity vector. This flux describes the amount of conserved quantity that, during a unit time, goes through a unit area (in 3 spatial dimensions), through a unit length (in 2 spatial dimensions), or through a point (in 1 spatial dimension). Note, we also use a zero source term, \\(S=0\\), a non-zero source term could be included, but for simplicity is assumed to be zero. As a PDE, this scalar conservation law is,
 
-| \\\[\\frac{\\partial U}{\\partial t} + \\nabla \\cdot \\left(\\vec{v}U\\right) = 0.\\\] | (2.19) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\frac{\\partial U}{\\partial t} + \\nabla \\cdot \\left(\\vec{v}U\\right) = 0.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.19)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Expanding the spatial derivatives gives,
 
-| \\\[\\frac{\\partial U}{\\partial t} + \\vec{v} \\cdot \\nabla U + \\left( \\nabla \\cdot \\vec{v} \\right)U = 0.\\\] | (2.20) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\frac{\\partial U}{\\partial t} + \\vec{v} \\cdot \\nabla U + \\left( \\nabla \\cdot \\vec{v} \\right)U = 0.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.20)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Often a reasonable assumption is that the velocity field is divergence free such that \\(\\nabla \\cdot \\vec{v} = 0\\). In this case, we arrive at what is commonly referred to as the convection equation,
 
-| \\\[\\frac{\\partial U}{\\partial t} + \\vec{v} \\cdot \\nabla U = 0. \\label{equ:convection\_ pde}\\\] | (2.21) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\frac{\\partial U}{\\partial t} + \\vec{v} \\cdot \\nabla U = 0. \\label{equ:convection\_ pde}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.21)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Physically, this equation states that following along the streamwise direction (i.e. convecting with the velocity), the quantity \\(U\\) does not change.
 
 In developing numerical methods for convection-dominated problems, we will often rely on insight that can be gained from the convection equation for the specific case when the velocity field is a constant value, i.e. \\(\\vec{v}(\\vec{x}, t) = \\vec{v}\\). In this situation, the solution to Equation [2.21](javascript: void(0)) has the following form,
 
-| \\\[U(\\vec{x}, t) = U\_0(\\vec{\\xi }) \\quad \\mbox{where} \\quad \\vec{\\xi } = \\vec{x} - \\vec{v}t, \\label{equ:convection\_ solution}\\\] | (2.22) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[U(\\vec{x}, t) = U\_0(\\vec{\\xi }) \\quad \\mbox{where} \\quad \\vec{\\xi } = \\vec{x} - \\vec{v}t, \\label{equ:convection\_ solution}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.22)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(U\_0(\\vec{x})\\) is the distribution of \\(U\\) at time \\(t=0\\). By substitution, we can confirm that this indeed is a solution of Equation [2.21](javascript: void(0)), Using the chain rule
 
-| &nbsp; | \\(\\displaystyle \\dfrac {\\partial U}{\\partial t} + \\vec{v} \\cdot \\nabla U\\) | \\(\\displaystyle =\\) | \\(\\displaystyle \\dfrac {\\partial }{\\partial t}U\_0(\\vec{\\xi }) + \\vec{v} \\cdot \\nabla \_{\\vec{x}} U\_0(\\vec{\\xi })\\) | &nbsp; | (2.23) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle \\nabla \_{\\vec{\\xi }} U\_0 \\cdot \\dfrac {\\partial \\vec{\\xi }}{\\partial t} + \\vec{v} \\cdot \\left( \\nabla \_{\\vec{\\xi }} U\_0 \\cdot \\nabla \_{\\vec{x}} \\xi \\right)\\) | &nbsp; | (2.24) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\dfrac {\\partial U}{\\partial t} + \\vec{v} \\cdot \\nabla U\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\dfrac {\\partial }{\\partial t}U\_0(\\vec{\\xi }) + \\vec{v} \\cdot \\nabla \_{\\vec{x}} U\_0(\\vec{\\xi })\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.23)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\nabla \_{\\vec{\\xi }} U\_0 \\cdot \\dfrac {\\partial \\vec{\\xi }}{\\partial t} + \\vec{v} \\cdot \\left( \\nabla \_{\\vec{\\xi }} U\_0 \\cdot \\nabla \_{\\vec{x}} \\xi \\right)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.24)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 , where \\(\\nabla \_{\\vec{x}}\\) and \\(\\nabla \_{\\vec{\\xi }}\\) denote, respectively, the gradients with respect to \\(\\vec{x}\\) and \\(\\vec{\\xi }\\). The partial derivatives of \\(\\vec{\\xi }\\) with respect to \\(\\vec{x}\\) and \\(r\\) are,
 
-| &nbsp; | \\(\\displaystyle \\nabla \_{\\vec{x}} \\vec{\\xi } = I, \\quad \\dfrac {\\partial \\vec{\\xi }}{\\partial t} = -\\vec{v},\\) | &nbsp; | (2.25) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\nabla \_{\\vec{x}} \\vec{\\xi } = I, \\quad \\dfrac {\\partial \\vec{\\xi }}{\\partial t} = -\\vec{v},\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.25)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(I\\) is the identity tensor. Upon substitution of these partial derivatives,
 
-| &nbsp; | \\(\\displaystyle \\dfrac {\\partial U}{\\partial t} + \\vec{v} \\cdot \\nabla {U}\\) | \\(\\displaystyle =\\) | \\(\\displaystyle \\nabla \_{\\vec{\\xi }} U\_0 \\cdot (-\\vec{v}) + \\vec{v} \\cdot \\left( \\nabla \_{\\vec{\\xi }} U\_0 \\cdot I \\right)\\) | &nbsp; | (2.26) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle \\nabla \_{\\vec{\\xi }} U\_0 \\cdot (-\\vec{v}) + \\vec{v} \\cdot \\left( \\nabla \_{\\vec{\\xi }} U\_0 \\right)\\) | &nbsp; | (2.27) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle 0.\\) | &nbsp; | (2.28) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\dfrac {\\partial U}{\\partial t} + \\vec{v} \\cdot \\nabla {U}\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\nabla \_{\\vec{\\xi }} U\_0 \\cdot (-\\vec{v}) + \\vec{v} \\cdot \\left( \\nabla \_{\\vec{\\xi }} U\_0 \\cdot I \\right)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.26)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\nabla \_{\\vec{\\xi }} U\_0 \\cdot (-\\vec{v}) + \\vec{v} \\cdot \\left( \\nabla \_{\\vec{\\xi }} U\_0 \\right)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.27)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 0.\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.28)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Thus, \\(U(\\vec{x},t) = U\_0(\\vec{x}-\\vec{v}t)\\) is a solution to the convection equation.
 
@@ -68,11 +246,33 @@ Thus, \\(U(\\vec{x},t) = U\_0(\\vec{x}-\\vec{v}t)\\) is a solution to the convec
 
 To illustrate the behavior of the convection equation consider a simple one-dimensional convection problem
 
-| \\\[\\frac{\\partial U}{\\partial t} + v\\frac{\\partial u}{\\partial x} = 0 \\label{equ:onedconvect}\\\] | (2.29) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\frac{\\partial U}{\\partial t} + v\\frac{\\partial u}{\\partial x} = 0 \\label{equ:onedconvect}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.29)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 on the domain \\(\\Omega = \[0,2\]\\), with constant flow velocity \\(v=1\\). The initial distribution \\(U\_0\\) is
 
-| \\\[U\_0(x) = 0.75e^{-\\left(\\frac{x-0.5}{0.1}\\right)^2}\\\] | (2.30) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[U\_0(x) = 0.75e^{-\\left(\\frac{x-0.5}{0.1}\\right)^2}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.30)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Figure [2.1]({{< baseurl >}}/resources/onedconvect) plots the initial solution \\(U\_0\\) as well as \\(U\\) at \\(t=1\\).
 
@@ -82,7 +282,30 @@ Figure [2.1]({{< baseurl >}}/resources/onedconvect) plots the initial solution 
 
 Looking at the solution for the one-dimensional convection problem, we observe that \\(U(x,t)\\) has the same shape as \\(U\_0(x)\\), except the solution has been shifted by a distance \\(v \\times t\\). This behavior in which the state \\(U\\) does not change as it propagates leads to the concept of a **characteristic**. A characteristic is defined as a trajectory \\(\\vec{x}(t)\\) along which the state does not change. The rate-of-change of \\(U\\) along a trajectory \\(\\vec{x}(t)\\) can be written using the total derivative as,
 
-| &nbsp; | \\(\\displaystyle \\dfrac {d U}{d t}\\) | \\(\\displaystyle =\\) | \\(\\displaystyle \\dfrac {\\partial U}{\\partial t} + \\dfrac {\\partial U}{\\partial x} \\dfrac {d x}{d t}.\\) | &nbsp; | (2.31) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\dfrac {d U}{d t}\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\dfrac {\\partial U}{\\partial t} + \\dfrac {\\partial U}{\\partial x} \\dfrac {d x}{d t}.\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.31)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Comparing this to Equation [2.29](javascript: void(0)), we see that if \\(\\frac{dx}{dt}=v\\), then \\(\\frac{dU}{dt}=0\\) (i.e., \\(U=\\) constant). In other words, the characteristic for the convection equation is a line with slope \\(v\\). Figure [2.2]({{< baseurl >}}/resources/charlines) shows the characteristic lines for the one-dimensional convection problem (in dashed lines) with the solutions at \\(t=0\\) and \\(t=1\\) superimposed. As we can see from Figure [2.2]({{< baseurl >}}/resources/charlines), the solution at \\((x,t)\\) is simply obtained by following the characteristic line back to \\(t=0\\) and evaluating the initial condition.
 
@@ -90,7 +313,7 @@ Comparing this to Equation [2.29](javascript: void(0)), we see that if \\(\\fra
 
 **Figure 2.2**: Characteristic lines for a one-dimensional convection problem with velocity \\(v=1\\)
 
-For convection and other equations which possess characteristics, the solution at a particular point in space and time \\(U(\\vec{x}, t)\\) depends only upon the points along the characteristics from earlier times. For any partial differential equation, we call the region which affects the solution at \\((\\vec{x}, t)\\)the **domain of dependence**. For convection, the domain of dependence for \\((\\vec{x},t)\\) is simply the characteristic line, \\(\\vec{x}(t)\\),\\(s<t\\).
+For convection and other equations which possess characteristics, the solution at a particular point in space and time \\(U(\\vec{x}, t)\\) depends only upon the points along the characteristics from earlier times. For any partial differential equation, we call the region which affects the solution at \\((\\vec{x}, t)\\)the **domain of dependence**. For convection, the domain of dependence for \\((\\vec{x},t)\\) is simply the characteristic line, \\(\\vec{x}(t)\\),\\(s\<t\\).
 
 Among other phenomena, this equation can model the convection of cars along a freeway. \\(U\\) is the number of cars per unit length of the freeway. There is with no entrance or exit ramps (source term) in the segment of freeway. The initial condition \\(U(x, 0)\\) is a distribution of cars at time \\(t=0\\). All cars are moving at velocity \\(v\\). So the flux, i.e., the number of cars that moves past a fixed spatial location per unit time, is \\(v U\\). At time \\(t=1\\) the distribution of cars, \\(U(x,1)\\), has shifted to the right, notice that the number of cars at point \\(x\\) at time \\(t=1\\) is the same as the number of cars at point \\(x-vt\\) at time \\(t=0\\). Notice that the car distribution \\(at t=1\\) does not depend on what is to the left or right of the characteristic.
 

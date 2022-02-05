@@ -6,7 +6,7 @@ title: 3.6 Introduction to Design Optimization
 uid: 1d39506a-8ae7-400e-107d-fe048008e5c2
 ---
 
-*   [<Introduction to Design Optimization]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/introduction-to-design-optimization)
+*   [\<Introduction to Design Optimization]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/introduction-to-design-optimization)
 *   [3.6.1Design Optimization]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/introduction-to-design-optimization)
 *   [3.6.2Gradient Based Optimization]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/introduction-to-design-optimization/1690r-gradient-based-optimization)
 *   [3.6.3Unconstrained Gradient-Based Optimization Methods]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/introduction-to-design-optimization/1690r-unconstrained-gradient-based-optimization-methods)
@@ -21,7 +21,18 @@ uid: 1d39506a-8ae7-400e-107d-fe048008e5c2
 
 Most optimization algorithms are iterative. We begin with an initial guess for our design variables, denoted \\(x^0\\). We then iteratively update this guess until the optimal design is achieved.
 
-| \\\[x^ q = x^{q-1} + \\alpha ^ q S^ q, \\; q = 1,2, \\ldots\\\] | (3.67) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[x^ q = x^{q-1} + \\alpha ^ q S^ q, \\; q = 1,2, \\ldots\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.67)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where
 
@@ -39,15 +50,48 @@ At each iteration we have two decisions to make: in which direction to move (i.e
 
 For \\(J(x)\\) a scalar objective function that depends on \\(n\\) design variables, the gradient of \\(J\\) with respect to \\(x=\[x\_1 x\_2 \\ldots x\_ n\]^ T\\) is a vector of length \\(n\\). In general, we need the gradient evaluated at some point \\(x^ k\\):
 
-| \\\[\\nabla J(x^ k) = \[ \\frac{\\partial J}{\\partial x\_1}(x^ k) \\ \\ldots \\frac{\\partial J}{\\partial x\_ n}(x^ k) \]\\\] | (3.68) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\nabla J(x^ k) = \[ \\frac{\\partial J}{\\partial x\_1}(x^ k) \\ \\ldots \\frac{\\partial J}{\\partial x\_ n}(x^ k) \]\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.68)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The second derivative of \\(J\\) with respect to \\(x\\) is a matrix, called the Hessian matrix, of dimension \\(n \\times n\\). In general, we need the Hessian evaluated at some point \\(x^ k\\):
 
-| \\\[\\nabla ^2 J(x^ k) = \[ \\frac{\\partial ^2 J}{\\partial x\_1^2}(x^ k) \\ \\ldots \\frac{\\partial ^2 J}{\\partial x\_1 \\partial x\_ n}(x^ k) \\\\ \\frac{\\partial ^2 J}{\\partial x\_1 \\partial x\_ n}(x^ k) \\ \\ldots \\frac{\\partial ^2 J}{\\partial x\_ n^2}(x^ k)\]\\\] | (3.69) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\nabla ^2 J(x^ k) = \[ \\frac{\\partial ^2 J}{\\partial x\_1^2}(x^ k) \\ \\ldots \\frac{\\partial ^2 J}{\\partial x\_1 \\partial x\_ n}(x^ k) \\\\ \\frac{\\partial ^2 J}{\\partial x\_1 \\partial x\_ n}(x^ k) \\ \\ldots \\frac{\\partial ^2 J}{\\partial x\_ n^2}(x^ k)\]\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.69)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 In other words, the \\((i,j)\\) entry of the Hessian is given by,
 
-| \\\[\\nabla ^2 J(x^ k)\_{i,j} = \\frac{\\partial ^2 J}{\\partial x\_ i \\partial x\_ j}(x^ k)\\\] | (3.70) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\nabla ^2 J(x^ k)\_{i,j} = \\frac{\\partial ^2 J}{\\partial x\_ i \\partial x\_ j}(x^ k)\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.70)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Consider the function \\(J(x)=3x\_1 + x\_1 x\_2 + x\_3^{2} + 6x\_2^{3} x\_3\\).
 

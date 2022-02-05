@@ -6,7 +6,7 @@ title: 2.10 More on Finite Element Methods
 uid: 62673265-55df-f200-dae2-644697a179db
 ---
 
-*   [<Calculation of the Stiffness Matrix]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-calculation-of-the-stiffness-matrix)
+*   [\<Calculation of the Stiffness Matrix]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-calculation-of-the-stiffness-matrix)
 *   [2.10.1Gaussian Quadrature]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/more-on-finite-element-methods)
 *   [2.10.2Boundary Conditions for Finite Elements]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/more-on-finite-element-methods/1690r-boundary-conditions-for-finite-elements)
 *   [\>Boundary Conditions for Finite Elements]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/more-on-finite-element-methods/1690r-boundary-conditions-for-finite-elements)
@@ -18,13 +18,35 @@ uid: 62673265-55df-f200-dae2-644697a179db
 
 The finite element method requires the calculation of integrals over individual elements, for example,
 
-| \\\[\\int \_{x\_{i}}^{x\_{i+1}} {\\phi \_ i}\_ x\\, k \\tilde{T}\_ x\\, dx, \\quad \\mbox{or} \\quad \\int \_{x\_{i}}^{x\_{i+1}} {\\phi \_ i}\\, f \\, dx.\\\] | (2.221) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{x\_{i}}^{x\_{i+1}} {\\phi \_ i}\_ x\\, k \\tilde{T}\_ x\\, dx, \\quad \\mbox{or} \\quad \\int \_{x\_{i}}^{x\_{i+1}} {\\phi \_ i}\\, f \\, dx.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.221)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 While in some settings these integrals can be calculated analytically, often they are too difficult. In this situation, numerical integration methods are used.
 
 Gaussian quadrature is one of the most commonly applied numerical integration methods. Gaussian quadrature approximates an integral as the weighted sum of the values of its integrand. Consider integrating the general function \\(g(\\xi )\\), over the domain \\(-1 \\leq \\xi \\leq 1\\). Gaussian quadrature approximates this integral as a weighted sum of the values of \\(g\\) evaluated at discrete points over the domain:
 
-| \\\[\\int \_{-1}^{+1} g(\\xi )\\, d\\xi \\approx \\sum \_{q=1}^{N\_ q} \\alpha \_ q g(\\xi \_ q). \\label{equ:gq}\\\] | (2.222) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{-1}^{+1} g(\\xi )\\, d\\xi \\approx \\sum \_{q=1}^{N\_ q} \\alpha \_ q g(\\xi \_ q). \\label{equ:gq}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.222)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Here we have used \\(N\_ q\\) quadrature points (i.e., integrand evaluations). \\(\\xi \_ q\\) is the location of the \\(q\\)th quadrature point in the domain and \\(\\alpha \_ q\\) is the corresponding quadrature weight.
 
@@ -32,60 +54,369 @@ Note that Gaussian quadrature rules are developed for specific integration limit
 
 Gaussian quadrature integration rules are determined by requiring exact integration of polynomial integrands, i.e., by considering integration of the function
 
-| \\\[g(\\xi ) = c\_0 + c\_1\\xi + c\_2\\xi ^2 + c\_3\\xi ^3 + \\cdots + c\_ M\\xi ^ M,\\\] | (2.223) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[g(\\xi ) = c\_0 + c\_1\\xi + c\_2\\xi ^2 + c\_3\\xi ^3 + \\cdots + c\_ M\\xi ^ M,\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.223)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 for all values of the \\(c\_ m\\) coefficients. Note that
 
-| \\\[\\int \_{-1}^{+1} \\xi ^ m\\, d\\xi = \\left\\{ \\begin{array}{cl} 0 & \\mbox{if } m = \\mbox{odd} \\\\\[0.1in\] \\frac{2}{m+1} & \\mbox{if } m = \\mbox{even} \\end{array}\\right.\\\] | (2.224) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{-1}^{+1} \\xi ^ m\\, d\\xi = \\left\\{ \\begin{array}{cl} 0 & \\mbox{if } m = \\mbox{odd} \\\\\[0.1in\] \\frac{2}{m+1} & \\mbox{if } m = \\mbox{even} \\end{array}\\right.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.224)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 This gives us the result:
 
-| \\\[\\int \_{-1}^{+1} \\sum \_{m=0}^{M} c\_ m\\xi ^ m\\, d\\xi = 2\\left(c\_0 + \\frac{1}{3}c\_2 + \\frac{1}{5}c\_4 + \\cdots \\right). \\label{equ:poly\_ integral}\\\] | (2.225) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{-1}^{+1} \\sum \_{m=0}^{M} c\_ m\\xi ^ m\\, d\\xi = 2\\left(c\_0 + \\frac{1}{3}c\_2 + \\frac{1}{5}c\_4 + \\cdots \\right). \\label{equ:poly\_ integral}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.225)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The \\(N\_ q = 1\\) Quadrature Rule
 -----------------------------------
 
 For \\(N\_ q=1\\), the quadrature rule is
 
-| \\\[\\int \_{-1}^{+1} g(\\xi )\\, d\\xi \\approx \\alpha \_1 g(\\xi \_1).\\\] | (2.226) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{-1}^{+1} g(\\xi )\\, d\\xi \\approx \\alpha \_1 g(\\xi \_1).\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.226)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Now, using Equation ([2.225](javascript: void(0))), we determine the highest order polynomial that is integrable by a single quadrature point:
 
-| &nbsp; | \\(\\displaystyle 2\\left(c\_0 + \\frac{1}{3}c\_2 + \\frac{1}{5}c\_4 + \\cdots \\right)\\) | \\(\\displaystyle =\\) | \\(\\displaystyle \\alpha \_1 g(\\xi \_1)\\) | &nbsp; | (2.227) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle \\alpha \_1 \\left(c\_0 + c\_1\\xi \_1 + c\_2\\xi \_1^2 + c\_3\\xi \_1^3 + \\cdots + c\_ M\\xi \_1^ M\\right).\\) | &nbsp; | (2.228) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 2\\left(c\_0 + \\frac{1}{3}c\_2 + \\frac{1}{5}c\_4 + \\cdots \\right)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\alpha \_1 g(\\xi \_1)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.227)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\alpha \_1 \\left(c\_0 + c\_1\\xi \_1 + c\_2\\xi \_1^2 + c\_3\\xi \_1^3 + \\cdots + c\_ M\\xi \_1^ M\\right).\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.228)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Matching term by term gives
 
-| &nbsp; | \\(\\displaystyle c\_0\\) | \\(\\displaystyle :\\) | \\(\\displaystyle 2 = \\alpha \_1 \\qquad \\Rightarrow \\alpha \_1 = 2,\\) | &nbsp; | (2.229) |
-| &nbsp; | \\(\\displaystyle c\_1\\) | \\(\\displaystyle :\\) | \\(\\displaystyle 0 = \\alpha \_1\\xi \_1 \\qquad \\Rightarrow \\xi \_1 = 0.\\) | &nbsp; | (2.230) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle c\_0\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle :\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 2 = \\alpha \_1 \\qquad \\Rightarrow \\alpha \_1 = 2,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.229)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle c\_1\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle :\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 0 = \\alpha \_1\\xi \_1 \\qquad \\Rightarrow \\xi \_1 = 0.\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.230)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Then, checking the \\(c\_2\\) term shows that it is not integrated exactly. So, with one point, a linear polynomial is the highest order polynomial that can be evaluated exactly and the quadrature rule is
 
-| \\\[\\int \_{-1}^{+1} g(\\xi )\\, d\\xi \\approx \\alpha \_1 g(\\xi \_1), \\qquad \\alpha \_1 = 2, \\quad \\xi \_1 = 0.\\\] | (2.231) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{-1}^{+1} g(\\xi )\\, d\\xi \\approx \\alpha \_1 g(\\xi \_1), \\qquad \\alpha \_1 = 2, \\quad \\xi \_1 = 0.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.231)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The \\(N\_ q = 2\\) Quadrature Rule
 -----------------------------------
 
 For \\(N\_ q=2\\), the quadrature rule is,
 
-| \\\[\\int \_{-1}^{+1} g(\\xi )\\, d\\xi \\approx \\alpha \_1 g(\\xi \_1) + \\alpha \_2 g(\\xi \_2).\\\] | (2.232) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{-1}^{+1} g(\\xi )\\, d\\xi \\approx \\alpha \_1 g(\\xi \_1) + \\alpha \_2 g(\\xi \_2).\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.232)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Again using Equation ([2.225](javascript: void(0))), we determine the highest order polynomial that is integrable by two quadrature points:
 
-| &nbsp; | \\(\\displaystyle 2\\left(c\_0 + \\frac{1}{3}c\_2 + \\frac{1}{5}c\_4 + \\cdots \\right)\\) | \\(\\displaystyle =\\) | \\(\\displaystyle \\alpha \_1 g(\\xi \_1) + \\alpha \_2 g(\\xi \_2)\\) | &nbsp; | (2.233) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle \\alpha \_1 \\left(c\_0 + c\_1\\xi \_1 + c\_2\\xi \_1^2 + c\_3\\xi \_1^3 + \\cdots + c\_ M\\xi \_1^ M\\right) +\\) | &nbsp; | (2.234) |
-| &nbsp; | \\(\\displaystyle \\alpha \_2 \\left(c\_0 + c\_1\\xi \_2 + c\_2\\xi \_2^2 + c\_3\\xi \_2^3 + \\cdots + c\_ M\\xi \_2^ M\\right).\\) | &nbsp; | (2.235) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 2\\left(c\_0 + \\frac{1}{3}c\_2 + \\frac{1}{5}c\_4 + \\cdots \\right)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\alpha \_1 g(\\xi \_1) + \\alpha \_2 g(\\xi \_2)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.233)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\alpha \_1 \\left(c\_0 + c\_1\\xi \_1 + c\_2\\xi \_1^2 + c\_3\\xi \_1^3 + \\cdots + c\_ M\\xi \_1^ M\\right) +\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.234)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\alpha \_2 \\left(c\_0 + c\_1\\xi \_2 + c\_2\\xi \_2^2 + c\_3\\xi \_2^3 + \\cdots + c\_ M\\xi \_2^ M\\right).\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.235)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Matching the first four terms gives the following constraints:
 
-| &nbsp; | \\(\\displaystyle c\_0\\) | \\(\\displaystyle :\\) | \\(\\displaystyle 2 = \\alpha \_1 + \\alpha \_2,\\) | &nbsp; | (2.236) |
-| &nbsp; | \\(\\displaystyle c\_1\\) | \\(\\displaystyle :\\) | \\(\\displaystyle 0 = \\alpha \_1\\xi \_1 + \\alpha \_2\\xi \_2,\\) | &nbsp; | (2.237) |
-| &nbsp; | \\(\\displaystyle c\_2\\) | \\(\\displaystyle :\\) | \\(\\displaystyle \\frac{2}{3} = \\alpha \_1\\xi \_1^2 + \\alpha \_2\\xi \_2^2,\\) | &nbsp; | (2.238) |
-| &nbsp; | \\(\\displaystyle c\_3\\) | \\(\\displaystyle :\\) | \\(\\displaystyle 0 = \\alpha \_1\\xi \_1^3 + \\alpha \_2\\xi \_2^3.\\) | &nbsp; | (2.239) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle c\_0\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle :\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 2 = \\alpha \_1 + \\alpha \_2,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.236)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle c\_1\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle :\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 0 = \\alpha \_1\\xi \_1 + \\alpha \_2\\xi \_2,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.237)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle c\_2\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle :\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\frac{2}{3} = \\alpha \_1\\xi \_1^2 + \\alpha \_2\\xi \_2^2,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.238)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle c\_3\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle :\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 0 = \\alpha \_1\\xi \_1^3 + \\alpha \_2\\xi \_2^3.\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.239)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 These constraints can be met by choosing
 
-| \\\[\\alpha \_1 = \\alpha \_2 = 1, \\quad \\xi \_1 = -\\frac{1}{\\sqrt {3}}, \\quad \\xi \_2 = \\frac{1}{\\sqrt {3}}.\\\] | (2.240) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\alpha \_1 = \\alpha \_2 = 1, \\quad \\xi \_1 = -\\frac{1}{\\sqrt {3}}, \\quad \\xi \_2 = \\frac{1}{\\sqrt {3}}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.240)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Thus, this rule will integrate cubic polynomials exactly.
 
@@ -94,22 +425,98 @@ Calculation of Forcing Integral with Gauss Quadrature
 
 We wish to apply Gaussian quadrature to evaluate the forcing integral,
 
-| \\\[\\int \_{x\_{i}}^{x\_{i+1}} {\\phi \_ i}\\, f \\, dx. \\label{equ:wf}\\\] | (2.241) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{x\_{i}}^{x\_{i+1}} {\\phi \_ i}\\, f \\, dx. \\label{equ:wf}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.241)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Remember that this is the last term in the definition of the weighted residual for our diffusion problem, Equation ([2.211](javascript: void(0))).
 
 To do this, we first transform between the \\(x\\) and \\(\\xi\\) space. For this integral in element \\(i\\), the transformation is
 
-| \\\[x(\\xi ) = x\_{i} + \\frac{1}{2}(1+\\xi )(x\_{i+1}-x\_ i), \\quad \\Rightarrow dx = \\frac{1}{2}(x\_{i+1}-x\_ i)d\\xi .\\\] | (2.242) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[x(\\xi ) = x\_{i} + \\frac{1}{2}(1+\\xi )(x\_{i+1}-x\_ i), \\quad \\Rightarrow dx = \\frac{1}{2}(x\_{i+1}-x\_ i)d\\xi .\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.242)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Substitution in the forcing integral gives
 
-| \\\[\\int \_{x\_{i}}^{x\_{i+1}} \\phi \_ i \\, f \\, dx = \\int \_{-1}^{+1} \\frac{1}{2}(x\_{i+1}-x\_ i) \\phi \_ i \\, f \\, d\\xi , \\qquad \\Rightarrow \\qquad g(\\xi ) = \\frac{1}{2}(x\_{i+1}-x\_ i)\\, \\phi \_ i\[x(\\xi )\]\\, f\[x(\\xi )\].\\\] | (2.243) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{x\_{i}}^{x\_{i+1}} \\phi \_ i \\, f \\, dx = \\int \_{-1}^{+1} \\frac{1}{2}(x\_{i+1}-x\_ i) \\phi \_ i \\, f \\, d\\xi , \\qquad \\Rightarrow \\qquad g(\\xi ) = \\frac{1}{2}(x\_{i+1}-x\_ i)\\, \\phi \_ i\[x(\\xi )\]\\, f\[x(\\xi )\].\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.243)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Note that the dependence of \\(\\phi \_ i\\) and \\(f\\) on \\(\\xi\\) is shown through the dependence of these functions on \\(x = x(\\xi )\\). However, for the basis functions, it is often easier to directly determine \\(\\phi \_ i\\) from \\(\\xi\\). For example, in the case of linear polynomial basis functions, the basis functions with element \\(i\\) can be written as
 
-| &nbsp; | \\(\\displaystyle \\phi \_1(\\xi )\\) | \\(\\displaystyle =\\) | \\(\\displaystyle \\frac{1}{2}(1-\\xi ),\\) | &nbsp; | (2.244) |
-| &nbsp; | \\(\\displaystyle \\phi \_2(\\xi )\\) | \\(\\displaystyle =\\) | \\(\\displaystyle \\frac{1}{2}(1+\\xi ).\\) | &nbsp; | (2.245) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\phi \_1(\\xi )\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\frac{1}{2}(1-\\xi ),\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.244)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\phi \_2(\\xi )\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\frac{1}{2}(1+\\xi ).\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.245)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Clearly, these functions vary linearly with \\(\\xi\\). \\(\\phi \_1(\\xi )\\) is one at \\(\\xi =-1\\) and decreases linearly to zero at \\(\\xi =+1\\). \\(\\phi \_2(\\xi )\\) is zero at \\(\\xi =-1\\) and increases linearly to one at \\(\\xi =+1\\).
 

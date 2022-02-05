@@ -6,7 +6,7 @@ title: 1.3 Order of Accuracy
 uid: 6121a3ca-d8f1-c652-7821-6a952ea8ff2c
 ---
 
-*   [<Order of Accuracy]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/order-of-accuracy)
+*   [\<Order of Accuracy]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/order-of-accuracy)
 *   [1.3.1Errors]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/order-of-accuracy)
 *   [1.3.2Local Truncation Error]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/order-of-accuracy/1690r-local-truncation-error)
 *   [1.3.3Local Order of Accuracy]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/order-of-accuracy/1690r-local-order-of-accuracy)
@@ -23,14 +23,108 @@ Global error measures the difference between the computed solution at a given ti
 
 If we can quantify how much the error changes in a single timestep, then we will have an indication of how much the error could change over a series of timesteps. Specifically, let's write the solution error, \\(e\\), at \\(t=T\\) as a sum of the change in error at each timestep,
 
-| \\\[e(T) = u(T) - v^{T/{\\Delta t}} = \\sum \_{n=1}^{T/{\\Delta t}} \\Delta e^ n,\\\] | (1.35) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[e(T) = u(T) - v^{T/{\\Delta t}} = \\sum \_{n=1}^{T/{\\Delta t}} \\Delta e^ n,\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.35)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(\\Delta e^ n\\) is the change in the error from iteration \\(n-1\\) to \\(n\\) (i.e. the local error). Suppose the local error is \\(O({\\Delta t}^{p+1})\\), then the global error might be expected to behave as,
 
-| &nbsp; | \\(\\displaystyle e(T)\\) | \\(\\displaystyle =\\) | \\(\\displaystyle \\sum \_{n=1}^{T/{\\Delta t}} \\Delta e^ n,\\) | &nbsp; | (1.36) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle \\sum \_{n=1}^{T/{\\Delta t}} O({\\Delta t}^{p+1}),\\) | &nbsp; | (1.37) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle \\frac{T}{{\\Delta t}} O({\\Delta t}^{p+1})\\) | &nbsp; | (1.38) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle O({\\Delta t}^ p).\\) | &nbsp; | (1.39) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle e(T)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\sum \_{n=1}^{T/{\\Delta t}} \\Delta e^ n,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.36)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\sum \_{n=1}^{T/{\\Delta t}} O({\\Delta t}^{p+1}),\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.37)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\frac{T}{{\\Delta t}} O({\\Delta t}^{p+1})\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.38)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle O({\\Delta t}^ p).\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.39)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Thus, the global error would decrease with \\({\\Delta t}\\) by one order less than the local error because the local errors sum for \\(T/{\\Delta t}\\) timesteps. However, we must be careful because the local errors do not have to sum this way, particularly if the numerical method is not stable. We will see in the next lecture that if a numerical method is both consistent and stable, this will be enough to guarantee convergence. For now, we concentrate on quantifying the local accuracy and leave the discussion of consistency and stability for another lecture.
 
@@ -41,29 +135,147 @@ Example: Local error of the forward Euler method
 
 Let's consider the forward Euler method as an example. Recall, the forward Euler method is,
 
-| \\\[v^{n+1} = v^ n + {\\Delta t}f(v^ n,t^ n).\\\] | (1.40) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[v^{n+1} = v^ n + {\\Delta t}f(v^ n,t^ n).\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.40)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Thus, for the forward Euler method, \\(v^{n+1} = v^{n+1}(v^ n,{\\Delta t},t^ n)\\). Then, if we substitute the exact solution into the right-hand side, we find,
 
-| \\\[v^{n+1}(u^ n,{\\Delta t},t^ n) = u^ n + {\\Delta t}f(u^ n,t^ n).\\\] | (1.41) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[v^{n+1}(u^ n,{\\Delta t},t^ n) = u^ n + {\\Delta t}f(u^ n,t^ n).\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.41)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Recall our notation that \\(u\\) is the exact solution; in this discussion we use the superscript notation \\(u^ n = u(n{\\Delta t})\\) realizing that \\(u = u(t)\\). Therefore the equation above gives the value of \\(v^{n+1}\\) that would be computed if the exact solution were available at time \\(t^ n\\). The local truncation error for the forward Euler method is then,
 
-| \\\[\\mbox{Local truncation error} \\equiv v^{n+1}(u^ n,{\\Delta t},t^ n) - u^{n+1}. \\label{equ:local\_ error\_ fe}\\\] | (1.42) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\mbox{Local truncation error} \\equiv v^{n+1}(u^ n,{\\Delta t},t^ n) - u^{n+1}. \\label{equ:local\_ error\_ fe}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.42)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Substitution gives,
 
-| \\\[\\mbox{Local truncation error} = u^ n + {\\Delta t}f(u^ n,t^ n) - u^{n+1}.\\\] | (1.43) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\mbox{Local truncation error} = u^ n + {\\Delta t}f(u^ n,t^ n) - u^{n+1}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.43)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The local order of accuracy is then found using a Taylor series expansion about \\(t = t^ n\\). Recall that \\(f(u^ n,t^ n) = u\_ t(t^ n)\\) and
 
-| \\\[u(t^{n+1}) = u(t^ n) + {\\Delta t}u\_ t(t^ n) + \\frac{1}{2}{\\Delta t}^2 u\_{tt}(t^ n) + O({\\Delta t}^3).\\\] | (1.44) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[u(t^{n+1}) = u(t^ n) + {\\Delta t}u\_ t(t^ n) + \\frac{1}{2}{\\Delta t}^2 u\_{tt}(t^ n) + O({\\Delta t}^3).\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.44)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Substitution gives the local truncation error as,
 
-| &nbsp; | \\(\\displaystyle \\mbox{Local truncation error}\\) | \\(\\displaystyle =\\) | \\(\\displaystyle u^ n + {\\Delta t}f(u^ n,t^ n) - u^{n+1},\\) | &nbsp; | (1.45) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle u(t^ n) + {\\Delta t}u\_ t(t^ n) - \\left\[u(t^ n) + {\\Delta t}u\_ t(t^ n) + \\frac{1}{2}{\\Delta t}^2 u\_{tt}(t^ n) + O({\\Delta t}^3)\\right\]\\) | &nbsp; | (1.46) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle -\\frac{1}{2}{\\Delta t}^2 u\_{tt}(t^ n) + O({\\Delta t}^3).\\) | &nbsp; | (1.47) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\mbox{Local truncation error}\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle u^ n + {\\Delta t}f(u^ n,t^ n) - u^{n+1},\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.45)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle u(t^ n) + {\\Delta t}u\_ t(t^ n) - \\left\[u(t^ n) + {\\Delta t}u\_ t(t^ n) + \\frac{1}{2}{\\Delta t}^2 u\_{tt}(t^ n) + O({\\Delta t}^3)\\right\]\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.46)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle -\\frac{1}{2}{\\Delta t}^2 u\_{tt}(t^ n) + O({\\Delta t}^3).\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.47)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Thus, the leading term of the local truncation error for the forward Euler method is \\(-\\frac{1}{2}{\\Delta t}^2 u\_{tt}(t^ n) = O({\\Delta t}^2)\\). Based on our previous argument, we expect that the global accuracy of the forward Euler method should be \\(O({\\Delta t})\\) (i.e. first order accuracy). This was in fact observed in Example [1.5]({{< baseurl >}}/resources/ga_fe).
 

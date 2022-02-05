@@ -6,7 +6,7 @@ title: 1.2 Discretizing ODEs
 uid: ae250ef9-53d1-78da-8810-f88b0aaa6408
 ---
 
-*   [<The Forward Euler Method]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/discretizing-odes/1690r-the-forward-euler-method)
+*   [\<The Forward Euler Method]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/discretizing-odes/1690r-the-forward-euler-method)
 *   [1.2.1First-Order ODEs]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/discretizing-odes)
 *   [1.2.2An Example of First Order ODE]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/discretizing-odes/1690r-an-example-of-first-order-ode)
 *   [1.2.3Discretization]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/discretizing-odes/1690r-discretization)
@@ -21,19 +21,63 @@ uid: ae250ef9-53d1-78da-8810-f88b0aaa6408
 
 Now, let's look at another integration method known as the midpoint method. For this method, we will use a slightly different point of view to derive it. Specifically, let's start from the definition of a derivative,
 
-| \\\[u\_ t(t) = \\lim \_{{\\Delta t}\\rightarrow 0} \\frac{u(t+{\\Delta t}) - u(t-{\\Delta t})}{2{\\Delta t}}\\\] | (1.31) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[u\_ t(t) = \\lim \_{{\\Delta t}\\rightarrow 0} \\frac{u(t+{\\Delta t}) - u(t-{\\Delta t})}{2{\\Delta t}}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.31)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Now, instead of taking the limit, assume a finite \\({\\Delta t}\\). Then, we end up with an approximation to \\(du/dt\\):
 
-| \\\[u\_ t(t) \\approx \\frac{u(t+{\\Delta t}) - u(t-{\\Delta t})}{2{\\Delta t}} \\qquad \\mbox{for small } {\\Delta t}\\\] | (1.32) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[u\_ t(t) \\approx \\frac{u(t+{\\Delta t}) - u(t-{\\Delta t})}{2{\\Delta t}} \\qquad \\mbox{for small } {\\Delta t}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.32)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Then, we can re-arrange this to the following estimate for \\(u(t+{\\Delta t})\\),
 
-| \\\[u(t+{\\Delta t}) \\approx u(t-{\\Delta t}) + 2{\\Delta t}u\_ t(t) \\label{equ:mp\_ approx}\\\] | (1.33) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[u(t+{\\Delta t}) \\approx u(t-{\\Delta t}) + 2{\\Delta t}u\_ t(t) \\label{equ:mp\_ approx}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.33)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Then, following the same process as in the forward Euler method, we arrive at the midpoint method,
 
-| \\\[v^{n+1} = v^{n-1} + 2{\\Delta t}f(v^ n, t^ n) \\qquad \\mbox{for} \\qquad n \\geq 1. \\label{equ:mp}\\\] | (1.34) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[v^{n+1} = v^{n-1} + 2{\\Delta t}f(v^ n, t^ n) \\qquad \\mbox{for} \\qquad n \\geq 1. \\label{equ:mp}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.34)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 However, because of the use of \\(v^{n-1}\\), the midpont method can only be applied for \\(n \\geq 1\\). Thus, for the first timestep a different numerical method must be applied (e.g. the forward Euler method).
 

@@ -6,7 +6,7 @@ title: 1.7 Stiffness and Implicit Methods
 uid: 543e8406-3445-482c-0202-05c77ce31e71
 ---
 
-*   [<Spectral Condition Number]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/stiffness-and-implicit-methods/1690r-spectral-condition-number)
+*   [\<Spectral Condition Number]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/stiffness-and-implicit-methods/1690r-spectral-condition-number)
 *   [1.7.1Stiffness]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/stiffness-and-implicit-methods)
 *   [1.7.2Spectral Condition Number]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/stiffness-and-implicit-methods/1690r-spectral-condition-number)
 *   [1.7.3Implicit Methods for Linear Systems of ODEs]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/stiffness-and-implicit-methods/1690r-implicit-methods-for-linear-systems-of-odes)
@@ -21,17 +21,102 @@ uid: 543e8406-3445-482c-0202-05c77ce31e71
 
 While implicit methods can allow significantly larger timesteps, they do involve more work than explicit methods. Consider the forward method applied to \\(u\_ t = Au\\) where \\(A\\) is a \\(d \\times d\\) matrix.
 
-| \\\[v^{n+1} = v^ n + {\\Delta t}A v^ n.\\\] | (1.122) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[v^{n+1} = v^ n + {\\Delta t}A v^ n.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.122)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 In this explicit algorithm, the largest computational cost is the matrix vector multiply, \\(A v^ n\\) which is an \\(O(d^2)\\) operation. Now, for backward Euler,
 
-| \\\[v^{n+1} = v^ n + {\\Delta t}A v^{n+1}.\\\] | (1.123) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[v^{n+1} = v^ n + {\\Delta t}A v^{n+1}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.123)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Re-arranging to solve for \\(v^{n+1}\\) gives:
 
-| &nbsp; | \\(\\displaystyle v^{n+1}\\) | \\(\\displaystyle =\\) | \\(\\displaystyle v^ n + {\\Delta t}A v^{n+1},\\) | &nbsp; | (1.124) |
-| &nbsp; | \\(\\displaystyle v^{n+1} - {\\Delta t}A v^{n+1}\\) | \\(\\displaystyle =\\) | \\(\\displaystyle v^ n,\\) | &nbsp; | (1.125) |
-| &nbsp; | \\(\\displaystyle \\left(I - {\\Delta t}A\\right)v^{n+1}\\) | \\(\\displaystyle =\\) | \\(\\displaystyle v^ n,\\) | &nbsp; | (1.126) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle v^{n+1}\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle v^ n + {\\Delta t}A v^{n+1},\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.124)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle v^{n+1} - {\\Delta t}A v^{n+1}\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle v^ n,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.125)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\left(I - {\\Delta t}A\\right)v^{n+1}\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle v^ n,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.126)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Thus, to find \\(v^{n+1}\\) requires the solution of a \\(d \\times d\\) system of equations which is an \\(O(d^3)\\) cost. As a result, for large systems, the cost of the \\(O(d^3)\\) linear solution may begin to outweigh the benefits of the larger timesteps that are possible when using implicit methods.
 

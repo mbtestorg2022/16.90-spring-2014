@@ -6,7 +6,7 @@ title: 1.8 Multi-Step Methods
 uid: 75e73977-a306-f553-2134-b4e0a24fdb81
 ---
 
-*   [<Multi-Step Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/multi-step-methods)
+*   [\<Multi-Step Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/multi-step-methods)
 *   [1.8.1Adams-Bashforth Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/multi-step-methods)
 *   [1.8.2Adams-Moulton Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/multi-step-methods/1690r-adams-moulton-methods)
 *   [1.8.3Backwards Differentiation Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/multi-step-methods/1690r-backwards-differentiation-methods)
@@ -20,15 +20,190 @@ uid: 75e73977-a306-f553-2134-b4e0a24fdb81
 
 Adams-Moulton methods are implicit methods of the form,
 
-| \\\[v^{n+1} - v^{n} = {\\Delta t}\\sum \_{i=0}^ s \\beta \_ i f^{n+1-i}.\\\] | (1.137) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[v^{n+1} - v^{n} = {\\Delta t}\\sum \_{i=0}^ s \\beta \_ i f^{n+1-i}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.137)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 These methods use the same time derivative approximation as the Adams-Bashforth methods, however they include the \\(n+1\\) value of \\(f\\).
 
-|  {{< br >}}{{< br >}} \\(p\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\beta \_0\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\beta \_1\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\beta \_2\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\beta \_3\\) {{< br >}}{{< br >}}  |
-|  {{< br >}}{{< br >}} 1 {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} 1 {{< br >}}{{< br >}}  | &nbsp; |
-|  {{< br >}}{{< br >}} 2 {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{1}{2}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{1}{2}\\) {{< br >}}{{< br >}}  | &nbsp; |
-|  {{< br >}}{{< br >}} 3 {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{5}{12}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{8}{12}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(-\\frac{1}{12}\\) {{< br >}}{{< br >}}  | &nbsp; |
-|  {{< br >}}{{< br >}} 4 {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{9}{24}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{19}{24}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(-\\frac{5}{24}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{1}{24}\\) {{< br >}}{{< br >}}  
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+\\(p\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\beta \_0\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\beta \_1\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\beta \_2\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\beta \_3\\)
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+1
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+1
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+2
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{1}{2}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{1}{2}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+3
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{5}{12}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{8}{12}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(-\\frac{1}{12}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+4
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{9}{24}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{19}{24}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(-\\frac{5}{24}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{1}{24}\\)
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 **Table 3**: Coefficients for Adams-Moulton methods. Note: the \\(p=1\\) method is the backward Euler method, and the \\(p=2\\) method is the Trapezoidal method.
 

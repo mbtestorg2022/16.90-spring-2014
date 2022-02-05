@@ -6,7 +6,7 @@ title: 2.8 Method of Weighted Residuals
 uid: bda18124-71a5-87a7-513f-cb81480a1e18
 ---
 
-*   [<Stability Exercises]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/eigenvalue-stability-of-finite-difference-methods/1690r-stability-exercises)
+*   [\<Stability Exercises]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/eigenvalue-stability-of-finite-difference-methods/1690r-stability-exercises)
 *   [2.8.1Functional Approximation of the Solution]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/method-of-weighted-residuals)
 *   [2.8.2The Collocation Method]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/method-of-weighted-residuals/1690r-the-collocation-method)
 *   [2.8.3The Method of Weighted Residuals]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/method-of-weighted-residuals/1690r-the-method-of-weighted-residuals)
@@ -20,7 +20,18 @@ uid: bda18124-71a5-87a7-513f-cb81480a1e18
 
 In this lecture, we introduce the method of weighted residuals, which provides a general formulation for the finite element method. To begin, let's focus on the particular problem of steady heat diffusion in a rod. This problem can be modeled as a one-dimensional PDE for the temperature, \\(T\\):
 
-| \\\[\\left(k T\_ x\\right)\_ x = -f, \\label{equ:steady\_ dif1d}\\\] | (2.149) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\left(k T\_ x\\right)\_ x = -f, \\label{equ:steady\_ dif1d}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.149)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(k(x)\\) is the thermal conductivity of the material and \\(f(x)\\) is the heat source (per unit length). Note that both \\(k\\) and \\(f\\) could be functions of \\(x\\). Also, let the physical domain for the problem be from \\(x=-L/2\\) to \\(x=L/2\\).
 
@@ -29,24 +40,204 @@ Steady Heat Diffusion
 
 Suppose that the rod has a length of \\(L=2\\), the thermal conductivity is constant, \\(k=1\\), and the heat source is \\(f(x) = 50 e^ x\\). Assume that the temperature at the ends of the rod are to be maintained at \\(T(\\pm 1) = 100\\). Equation ([2.149](javascript: void(0))) can be integrated twice to obtain:
 
-| &nbsp; | \\(\\displaystyle \\left(k T\_ x\\right)\_ x\\) | \\(\\displaystyle =\\) | \\(\\displaystyle -f,\\) | &nbsp; | (2.150) |
-| &nbsp; | \\(\\displaystyle T\_{xx}\\) | \\(\\displaystyle =\\) | \\(\\displaystyle -50 e^ x,\\) | &nbsp; | (2.151) |
-| &nbsp; | \\(\\displaystyle T\_ x\\) | \\(\\displaystyle =\\) | \\(\\displaystyle -50 e^ x + a,\\) | &nbsp; | (2.152) |
-| &nbsp; | \\(\\displaystyle T\\) | \\(\\displaystyle =\\) | \\(\\displaystyle -50 e^ x + ax + b.\\) | &nbsp; | (2.153) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\left(k T\_ x\\right)\_ x\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle -f,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.150)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle T\_{xx}\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle -50 e^ x,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.151)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle T\_ x\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle -50 e^ x + a,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.152)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle T\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle -50 e^ x + ax + b.\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.153)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Now, applying boundary conditions so that \\(T(\\pm 1) = 100\\),
 
-| &nbsp; | \\(\\displaystyle -50 e^{1} + a + b\\) | \\(\\displaystyle =\\) | \\(\\displaystyle 100,\\) | &nbsp; | (2.154) |
-| &nbsp; | \\(\\displaystyle -50 e^{-1} - a + b\\) | \\(\\displaystyle =\\) | \\(\\displaystyle 100.\\) | &nbsp; | (2.155) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle -50 e^{1} + a + b\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 100,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.154)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle -50 e^{-1} - a + b\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 100.\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.155)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 This is a \\(2\\times 2\\) system which can be solved for \\(a\\) and \\(b\\) to find
 
-| &nbsp; | \\(\\displaystyle a\\) | \\(\\displaystyle =\\) | \\(\\displaystyle 50 \\sinh (1)\\) | &nbsp; | (2.156) |
-| &nbsp; | \\(\\displaystyle b\\) | \\(\\displaystyle =\\) | \\(\\displaystyle 100 + 50 \\cosh (1),\\) | &nbsp; | (2.157) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle a\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 50 \\sinh (1)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.156)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle b\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 100 + 50 \\cosh (1),\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.157)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(\\cosh (y) = (e^ y + e^{-y})/2\\) and \\(\\sinh (y) = (e^ y - e^{-y})/2\\). Thus, the exact solution to this problem is
 
-| \\\[T = -50 e^ x + 50 x \\sinh (1) + 100 + 50 \\cosh (1). \\label{equ:steady\_ dif1d\_ Texact}\\\] | (2.158) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[T = -50 e^ x + 50 x \\sinh (1) + 100 + 50 \\cosh (1). \\label{equ:steady\_ dif1d\_ Texact}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.158)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 A plot of this solution is shown in Figure [2.25]({{< baseurl >}}/resources/steady_dif1d_texact).
 
@@ -56,7 +247,18 @@ A plot of this solution is shown in Figure [2.25]({{< baseurl >}}/resources/ste
 
 A common approach to approximating the solution to a PDE such as heat diffusion is to use a series of weighted functions. For example, for the temperature in the steady heat diffusion example we might assume that,
 
-| \\\[\\tilde{T}(x) = 100 + \\sum \_{j=1}^{N} a\_ j \\phi \_ j(x),\\\] | (2.159) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\tilde{T}(x) = 100 + \\sum \_{j=1}^{N} a\_ j \\phi \_ j(x),\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.159)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(\\tilde{T}(x)\\) is the approximation of \\(T(x)\\), \\(N\\) is the number of terms (functions) in the approximation, \\(\\phi \_ j(x)\\) are the (known) functions, and \\(a\_ j\\) are the unknown function weights. The functions \\(\\phi \_ j(x)\\) are often called _basis functions_. They are usually designed to satisfy the boundary conditions. So, in this example where the temperature is 100 at \\(x = \\pm 1\\), then \\(\\phi \_ j(\\pm 1) = 0\\) (don't forget that \\(\\tilde{T}\\) was defined to include the constant term of 100).
 
@@ -66,13 +268,35 @@ The question remains what functions (and how many) to choose for \\(\\phi \_ j(x
     
 *   A quadratic function can be designed to satisy the boundary conditions in the following manner,
     
-    | \\\[\\phi \_1(x) = (1+x)(1-x).\\\] | (2.160) 
+    {{< tableopen >}}
+    {{< tropen >}}
+    {{< tdopen >}}
+    \\\[\\phi \_1(x) = (1+x)(1-x).\\\]
+    {{< tdclose >}}
+    {{< tdopen >}}
+    (2.160)
+    {{< tdclose >}}
+    
+    {{< trclose >}}
+    
+    {{< tableclose >}}
     
     By including factors which go to zero at the end points, we have constructed a quadratic function which will satisfy the required boundary conditions. A plot of \\(\\phi \_1(x)\\) is shown in Figure [2.26]({{< baseurl >}}/resources/mwr_phi).
     
 *   Suppose we wanted to include a cubic polynomial in the approximation, then one way we could do this is multiply \\(\\phi \_1(x)\\) by \\(x\\).
     
-    | \\\[\\phi \_2(x) = x\\phi \_1(x) = x (1+x) (1-x).\\\] | (2.161) 
+    {{< tableopen >}}
+    {{< tropen >}}
+    {{< tdopen >}}
+    \\\[\\phi \_2(x) = x\\phi \_1(x) = x (1+x) (1-x).\\\]
+    {{< tdclose >}}
+    {{< tdopen >}}
+    (2.161)
+    {{< tdclose >}}
+    
+    {{< trclose >}}
+    
+    {{< tableclose >}}
     
     Since \\(\\phi \_1(x)\\) goes to zero at the end points, then so will \\(\\phi \_2(x)\\). A plot of \\(\\phi \_2(x)\\) is shown in Figure [2.26]({{< baseurl >}}/resources/mwr_phi). There are actually some better ways to choose these higher-order polynomials then simply multiplying the lowest order polynomial by powers of \\(x\\). The problem with the current approach is that if the number of terms were large (so that the powers of \\(x\\) would be large), then the set of polynomials (i.e., \\(\\phi \_ j(x)\\)) become very poorly conditioned resulting in many numerical difficulties. We will not discuss issues of conditioning but more advanced texts on finite element methods or related subjects can be consulted. For low order polynomial approximations, the issues of conditioning do not play an important role.
     

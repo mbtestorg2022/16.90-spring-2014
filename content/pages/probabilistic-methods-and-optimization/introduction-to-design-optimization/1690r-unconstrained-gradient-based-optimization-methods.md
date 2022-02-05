@@ -6,7 +6,7 @@ title: 3.6 Introduction to Design Optimization
 uid: da1cf617-8af1-53b1-4d4a-177f24979948
 ---
 
-*   [<Gradient Based Optimization]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/introduction-to-design-optimization/1690r-gradient-based-optimization)
+*   [\<Gradient Based Optimization]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/introduction-to-design-optimization/1690r-gradient-based-optimization)
 *   [3.6.1Design Optimization]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/introduction-to-design-optimization)
 *   [3.6.2Gradient Based Optimization]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/introduction-to-design-optimization/1690r-gradient-based-optimization)
 *   [3.6.3Unconstrained Gradient-Based Optimization Methods]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/introduction-to-design-optimization/1690r-unconstrained-gradient-based-optimization-methods)
@@ -57,7 +57,18 @@ The conjugate gradient method is another popular gradient based method that only
 
 The step size \\(\\alpha ^ q\\) is chosen in the same way it is for the steepest descent method. This choice of search direction results in succesive search directions that are conjugate, i.e.,
 
-| \\\[S^{jT} H S^ k = 0\\\] | (3.71) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[S^{jT} H S^ k = 0\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.71)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The conjugate gradient method makes use of information from previous iterations without having to store a matrix. This greatly improves the convergence rate compared to the steepest descent method, which only uses information from the current iteration to choose the search direction.
 
@@ -66,17 +77,50 @@ Newton Method
 
 The Newton Method makes use of the Hessian matrix to compute the search direction. In much the same way that the Newton-Raphson method determines stationary points of a set of nonlinear equations, the Newton method determines stationary points of the gradient of a function. The Taylor series of the objective function is given by:
 
-| \\\[J(x) = J(x^0) + \\nabla J(x^0)^ T \\Delta x + \\Delta x^ T H(x^0) \\Delta x + \\cdots\\\] | (3.72) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[J(x) = J(x^0) + \\nabla J(x^0)^ T \\Delta x + \\Delta x^ T H(x^0) \\Delta x + \\cdots\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.72)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(\\Delta x = x - x^0\\) and \\(H=\\nabla ^2 J\\).
 
 If we differentiate the Taylor series expantion and neglect higher order terms, we have that:
 
-| \\\[\\nabla J(x) \\approx \\nabla J(x^0) + H(x^0) \\Delta x\\\] | (3.73) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\nabla J(x) \\approx \\nabla J(x^0) + H(x^0) \\Delta x\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.73)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 At optimum, \\(\\nabla J(x)=0\\), so
 
-| \\\[\\nabla J(x^0) + H(x^0) \\Delta x = 0 \\\\ \\Delta x = -H^{-1}(x^0)\\nabla J(x^0)\\\] | (3.74) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\nabla J(x^0) + H(x^0) \\Delta x = 0 \\\\ \\Delta x = -H^{-1}(x^0)\\nabla J(x^0)\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.74)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 If \\(J(x)\\) is quadratic, Newton's method gives exact solution in one iteration. If \\(J(x)\\) not quadratic (as is usually the case), we perform a Taylor series about new point and repeat until converged. Newton's method is an efficient technique if the optimization is started near the solution. Typically, the advantage of using Newton's method over other alternatives arises when we are near to an optimal solution.
 

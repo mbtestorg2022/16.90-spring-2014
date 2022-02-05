@@ -6,7 +6,7 @@ title: 2.9 Introduction to Finite Elements
 uid: c369789e-d0c6-3741-858a-5dcba10708e4
 ---
 
-*   [<Weak Form of the Weighted Residual]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-weak-form-of-the-weighted-residual)
+*   [\<Weak Form of the Weighted Residual]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-weak-form-of-the-weighted-residual)
 *   [2.9.1Motivation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements)
 *   [2.9.21-D Finite Element Mesh and Notation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-1-d-finite-element-mesh-and-notation)
 *   [2.9.31-D Linear Elements and the Nodal Basis]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-1-d-linear-elements-and-the-nodal-basis)
@@ -22,39 +22,138 @@ uid: c369789e-d0c6-3741-858a-5dcba10708e4
 
 The implementation of the finite element method requires finding the weak form of the residual for each weight function \\(\\phi \_ j(x)\\). For the diffusion problem the \\(j^{th}\\) weighted residual is
 
-| \\\[r(\\tilde{T}, \\phi \_ j) \\equiv \\left\[\\phi \_ j\\, k \\tilde{T}\_ x\\right\]^{L/2}\_{-L/2} - \\int \_{-L/2}^{L/2} {\\phi \_ j}\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{-L/2}^{L/2} \\phi \_ j f\\, dx. \\label{equ:Rj\_ dif1d}\\\] | (2.211) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[r(\\tilde{T}, \\phi \_ j) \\equiv \\left\[\\phi \_ j\\, k \\tilde{T}\_ x\\right\]^{L/2}\_{-L/2} - \\int \_{-L/2}^{L/2} {\\phi \_ j}\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{-L/2}^{L/2} \\phi \_ j f\\, dx. \\label{equ:Rj\_ dif1d}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.211)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 We will consider the evaluation of the term \\(\\int \_{-L/2}^{L/2} \\phi \_{j\_ x}k\\tilde{T}\_{x} dx\\) below. The approximation of \\(\\int \_{-L/2}^{L/2} \\phi \_{j\_ x} f dx\\) will be discussed in Section [2.10.1]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/more-on-finite-element-methods); for now, we assume that this integral can be calculated analytically. For now, consider the term \\(\\int \_{-L/2}^{L/2} {\\phi \_ j}\_ x\\, k \\tilde{T}\_ x\\, dx\\). While it is a global integral (i.e., an integral over the entire domain), in reality \\(\\phi \_ j(x)\\) is non-zero only over the two elements that include node \\(j\\):
 
-| \\\[\\Rightarrow \\int \_{-L/2}^{L/2} {\\phi \_ j}\_ x\\, k \\tilde{T}\_ x\\, dx = \\int \_{x\_{j-1}}^{x\_{j+1}} {\\phi \_ j}\_ x\\, k \\tilde{T}\_ x\\, dx.\\\] | (2.212) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\Rightarrow \\int \_{-L/2}^{L/2} {\\phi \_ j}\_ x\\, k \\tilde{T}\_ x\\, dx = \\int \_{x\_{j-1}}^{x\_{j+1}} {\\phi \_ j}\_ x\\, k \\tilde{T}\_ x\\, dx.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.212)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The derivative of basis function \\(j\\) is
 
-| \\\[{\\phi \_ j}\_ x(x) = \\left\\{ \\begin{array}{cl} 0, & \\mbox{for } x < x\_{j-1}, \\\\\[0.1in\] \\frac{1}{\\Delta x\_{j-1}}, & \\mbox{for } x\_{j-1} < x < x\_{j},\\\\\[0.1in\] \\frac{-1}{\\Delta x\_{j}}, & \\mbox{for } x\_{j} < x < x\_{j+1},\\\\\[0.1in\] 0, & \\mbox{for } x > x\_{j+1}. \\end{array}\\right. \\label{equ:phi\_ x\_ linear}\\\] | (2.213) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[{\\phi \_ j}\_ x(x) = \\left\\{ \\begin{array}{cl} 0, & \\mbox{for } x \< x\_{j-1}, \\\\\[0.1in\] \\frac{1}{\\Delta x\_{j-1}}, & \\mbox{for } x\_{j-1} \< x \< x\_{j},\\\\\[0.1in\] \\frac{-1}{\\Delta x\_{j}}, & \\mbox{for } x\_{j} \< x \< x\_{j+1},\\\\\[0.1in\] 0, & \\mbox{for } x > x\_{j+1}. \\end{array}\\right. \\label{equ:phi\_ x\_ linear}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.213)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Thus,
 
-| \\\[\\int \_{x\_{j-1}}^{x\_{j+1}} {\\phi \_ j}\_ x\\, k \\tilde{T}\_ x\\, dx = \\frac{1}{\\Delta x\_{j-1}} \\int \_{x\_{j-1}}^{x\_{j }} k \\tilde{T}\_ x\\, dx - \\frac{1}{\\Delta x\_{j }} \\int \_{x\_{j }}^{x\_{j+1}} k \\tilde{T}\_ x\\, dx.\\\] | (2.214) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{x\_{j-1}}^{x\_{j+1}} {\\phi \_ j}\_ x\\, k \\tilde{T}\_ x\\, dx = \\frac{1}{\\Delta x\_{j-1}} \\int \_{x\_{j-1}}^{x\_{j }} k \\tilde{T}\_ x\\, dx - \\frac{1}{\\Delta x\_{j }} \\int \_{x\_{j }}^{x\_{j+1}} k \\tilde{T}\_ x\\, dx.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.214)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Next, take the derivative of \\(\\tilde{T}\\):
 
-| \\\[\\tilde{T}\_ x(x) = \\sum \_{i=1}^{N+1} a\_ i {\\phi \_ i}\_ x(x).\\\] | (2.215) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\tilde{T}\_ x(x) = \\sum \_{i=1}^{N+1} a\_ i {\\phi \_ i}\_ x(x).\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.215)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 For the integral in element \\(j-1\\), the only non-zero contributions to \\(\\tilde{T}\_ x\\) are from \\(\\phi \_{j-1}\\) and \\(\\phi \_{j}\\), specifically,
 
-| \\\[\\mbox{In element }j-1: \\qquad \\tilde{T}\_ x = a\_{j-1}{\\phi \_{j-1}}\_ x + a\_{j}{\\phi \_{i}}\_ x = \\frac{a\_ j - a\_{j-1}}{\\Delta x\_{j-1}}.\\\] | (2.216) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\mbox{In element }j-1: \\qquad \\tilde{T}\_ x = a\_{j-1}{\\phi \_{j-1}}\_ x + a\_{j}{\\phi \_{i}}\_ x = \\frac{a\_ j - a\_{j-1}}{\\Delta x\_{j-1}}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.216)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Similarly,
 
-| \\\[\\mbox{In element }j: \\qquad \\tilde{T}\_ x = a\_{j}{\\phi \_{j}}\_ x + a\_{j+1}{\\phi \_{j+1}}\_ x = \\frac{a\_{j+1}-a\_ j}{\\Delta x\_{j}}.\\\] | (2.217) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\mbox{In element }j: \\qquad \\tilde{T}\_ x = a\_{j}{\\phi \_{j}}\_ x + a\_{j+1}{\\phi \_{j+1}}\_ x = \\frac{a\_{j+1}-a\_ j}{\\Delta x\_{j}}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.217)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Substituting these expressions for the derivatives into the integral gives
 
-| \\\[\\int \_{x\_{j-1}}^{x\_{j+1}} {\\phi \_ j}\_ x\\, k \\tilde{T}\_ x\\, dx = \\frac{a\_{j}-a\_{j-1}}{(\\Delta x\_{j-1})^2} \\int \_{x\_{j-1}}^{x\_{j }} k \\, dx - \\frac{a\_{j+1}-a\_{j}}{(\\Delta x\_{j })^2} \\int \_{x\_{j }}^{x\_{j+1}} k \\, dx.\\\] | (2.218) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{x\_{j-1}}^{x\_{j+1}} {\\phi \_ j}\_ x\\, k \\tilde{T}\_ x\\, dx = \\frac{a\_{j}-a\_{j-1}}{(\\Delta x\_{j-1})^2} \\int \_{x\_{j-1}}^{x\_{j }} k \\, dx - \\frac{a\_{j+1}-a\_{j}}{(\\Delta x\_{j })^2} \\int \_{x\_{j }}^{x\_{j+1}} k \\, dx.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.218)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 At this point, we must integrate \\(k(x)\\) in each element. Efficient numerical methods to approximate this integral are discussed in Section [2.10.1]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/more-on-finite-element-methods). For the situation in which \\(k\\) is constant throughout the domain the integral reduces to the following expression.
 
-| \\\[\\mbox{For }k = \\mbox{constant}: \\qquad \\int \_{x\_{j-1}}^{x\_{j+1}} {\\phi \_ j}\_ x\\, k \\tilde{T}\_ x\\, dx = k\\frac{a\_{j}-a\_{j-1}}{\\Delta x\_{j-1}}- k\\frac{a\_{j+1}-a\_{j}}{\\Delta x\_{j }}.\\\] | (2.219) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\mbox{For }k = \\mbox{constant}: \\qquad \\int \_{x\_{j-1}}^{x\_{j+1}} {\\phi \_ j}\_ x\\, k \\tilde{T}\_ x\\, dx = k\\frac{a\_{j}-a\_{j-1}}{\\Delta x\_{j-1}}- k\\frac{a\_{j+1}-a\_{j}}{\\Delta x\_{j }}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.219)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Exercise
 --------

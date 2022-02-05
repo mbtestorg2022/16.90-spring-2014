@@ -6,7 +6,7 @@ title: 2.3 Introduction to Finite Difference Methods
 uid: 02467893-75dd-44cc-fcac-58f1a4ee9702
 ---
 
-*   [<Linear Elasticity]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations/1690r-linear-elasticity)
+*   [\<Linear Elasticity]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations/1690r-linear-elasticity)
 *   [2.3.1Finite Difference Approximations]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-difference-methods)
 *   [2.3.2Finite Difference Methods]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-difference-methods/1690r-finite-difference-methods)
 *   [2.3.3Finite Difference Method Applied to 1-D Convection]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-difference-methods/1690r-finite-difference-method-applied-to-1-d-convection)
@@ -28,29 +28,147 @@ Finite difference methods for PDEs are essentially built on the same idea, but a
 
 In the following we derive a finite difference approximation of \\(\\frac{\\partial U}{\\partial x}\\) at node \\(x\_ i\\). For a differentiable function \\(U\\), the derivative at the point \\(x\_ i\\) is given by:
 
-| \\\[\\left. \\frac{\\partial U}{\\partial x} \\right&#124;\_{x\_ i} = \\lim \_{\\Delta x \\to 0} \\frac{U(x\_ i+\\Delta x) - U(x\_ i - \\Delta x)}{2\\Delta x}.\\\] | (2.45) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\left. \\frac{\\partial U}{\\partial x} \\right|\_{x\_ i} = \\lim \_{\\Delta x \\to 0} \\frac{U(x\_ i+\\Delta x) - U(x\_ i - \\Delta x)}{2\\Delta x}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.45)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The finite difference approximation is obtained by eliminating the limiting process:
 
-| \\\[{U\_ x}\_ i \\approx \\frac{U(x\_ i+\\Delta x) - U(x\_ i-\\Delta x)}{2 \\Delta x} = \\frac{U\_{i+1} - U\_{i-1}}{2 \\Delta x} \\equiv \\delta \_{2x} U\_ i.\\\] | (2.46) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[{U\_ x}\_ i \\approx \\frac{U(x\_ i+\\Delta x) - U(x\_ i-\\Delta x)}{2 \\Delta x} = \\frac{U\_{i+1} - U\_{i-1}}{2 \\Delta x} \\equiv \\delta \_{2x} U\_ i.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.46)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The finite difference operator \\(\\delta \_{2x}\\) is called a central difference operator. Finite difference approximations can also be one-sided. For example, a backward difference approximation is,
 
-| \\\[\\left.\\frac{\\partial U}{\\partial x}\\right&#124;\_{i,j} \\approx \\delta \_{x}^{-} U\_{i,j} \\equiv \\frac{1}{{\\scriptstyle \\Delta } x}\\left(U\_{i,j} - U\_{i-1,j}\\right), \\label{equ:ux\_ backwarddiff}\\\] | (2.47) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\left.\\frac{\\partial U}{\\partial x}\\right|\_{i,j} \\approx \\delta \_{x}^{-} U\_{i,j} \\equiv \\frac{1}{{\\scriptstyle \\Delta } x}\\left(U\_{i,j} - U\_{i-1,j}\\right), \\label{equ:ux\_ backwarddiff}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.47)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 and a forward difference approximation is,
 
-| \\\[\\left.\\frac{\\partial U}{\\partial x}\\right&#124;\_{i,j} \\approx \\delta \_{x}^{+} U\_{i,j} \\equiv \\frac{1}{{\\scriptstyle \\Delta } x}\\left(U\_{i+1,j} - U\_{i,j}\\right), \\label{equ:ux\_ forwarddiff}\\\] | (2.48) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\left.\\frac{\\partial U}{\\partial x}\\right|\_{i,j} \\approx \\delta \_{x}^{+} U\_{i,j} \\equiv \\frac{1}{{\\scriptstyle \\Delta } x}\\left(U\_{i+1,j} - U\_{i,j}\\right), \\label{equ:ux\_ forwarddiff}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.48)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 We can also derive finite difference approximations for higher-order derivatives. For example, consider the following definition for the second derivative,
 
-| &nbsp; | \\(\\displaystyle \\frac{\\partial ^2 U}{\\partial x^2}(x)\\) | \\(\\displaystyle =\\) | \\(\\displaystyle \\lim \_{{\\scriptstyle \\Delta } x\\rightarrow 0} \\frac{{\\partial U}/{\\partial x}(x+{\\scriptstyle \\Delta } x/2) - {\\partial U}/{\\partial x}(x-{\\scriptstyle \\Delta } x/2)}{{\\scriptstyle \\Delta } x}\\) | &nbsp; | (2.49) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle \\lim \_{{\\scriptstyle \\Delta } x\\rightarrow 0} \\frac{1}{{\\scriptstyle \\Delta } x}\\left\[ \\frac{U(x+{\\scriptstyle \\Delta } x)-U(x)}{{\\scriptstyle \\Delta } x} - \\frac{U(x)-U(x-{\\scriptstyle \\Delta } x)}{{\\scriptstyle \\Delta } x}\\right\]\\) | &nbsp; | (2.50) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle \\lim \_{{\\scriptstyle \\Delta } x\\rightarrow 0} \\frac{1}{{\\scriptstyle \\Delta } x^2}\\left\[ U(x+{\\scriptstyle \\Delta } x)-2U(x) + U(x-{\\scriptstyle \\Delta } x) \\right\].\\) | &nbsp; | (2.51) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\frac{\\partial ^2 U}{\\partial x^2}(x)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\lim \_{{\\scriptstyle \\Delta } x\\rightarrow 0} \\frac{{\\partial U}/{\\partial x}(x+{\\scriptstyle \\Delta } x/2) - {\\partial U}/{\\partial x}(x-{\\scriptstyle \\Delta } x/2)}{{\\scriptstyle \\Delta } x}\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.49)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\lim \_{{\\scriptstyle \\Delta } x\\rightarrow 0} \\frac{1}{{\\scriptstyle \\Delta } x}\\left\[ \\frac{U(x+{\\scriptstyle \\Delta } x)-U(x)}{{\\scriptstyle \\Delta } x} - \\frac{U(x)-U(x-{\\scriptstyle \\Delta } x)}{{\\scriptstyle \\Delta } x}\\right\]\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.50)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\lim \_{{\\scriptstyle \\Delta } x\\rightarrow 0} \\frac{1}{{\\scriptstyle \\Delta } x^2}\\left\[ U(x+{\\scriptstyle \\Delta } x)-2U(x) + U(x-{\\scriptstyle \\Delta } x) \\right\].\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.51)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The finite difference approximation for the second order derivative is obtained eliminating the limiting process.
 
-| \\\[\\left.\\frac{\\partial ^2 U}{\\partial x^2}\\right&#124;\_{i,j} \\approx \\delta \_{x}^2 U\_{i,j} \\equiv \\frac{1}{{\\scriptstyle \\Delta } x^2}\\left(U\_{i+1,j} - 2 U\_{i,j} + U\_{i-1,j}\\right). \\label{equ:uxx\_ centraldiff}\\\] | (2.52) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\left.\\frac{\\partial ^2 U}{\\partial x^2}\\right|\_{i,j} \\approx \\delta \_{x}^2 U\_{i,j} \\equiv \\frac{1}{{\\scriptstyle \\Delta } x^2}\\left(U\_{i+1,j} - 2 U\_{i,j} + U\_{i-1,j}\\right). \\label{equ:uxx\_ centraldiff}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.52)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Finite Difference Approximations in 2D
 --------------------------------------
@@ -63,8 +181,51 @@ We can easily extend the concept of finite difference approximations to multiple
 
 Using \\(U\_{i,j}\\) to denote the value of \\(U\\) at node \\((i,j)\\) our central derivative approximations for the first derivatives are:
 
-| &nbsp; | \\(\\displaystyle \\left.\\dfrac {\\partial U}{\\partial x}\\right&#124;\_{i,j}\\) | \\(\\displaystyle \\approx\\) | \\(\\displaystyle \\frac{U\_{i+1,j} - U\_{i-1,j}}{2 \\Delta x} \\equiv \\delta \_{2x} U\_{i,j}.\\) | &nbsp; | (2.53) |
-| &nbsp; | \\(\\displaystyle \\left.\\dfrac {\\partial U}{\\partial y}\\right&#124;\_{i,j}\\) | \\(\\displaystyle \\approx\\) | \\(\\displaystyle \\frac{U\_{i,j+1} - U\_{i,j-1}}{2 \\Delta y} \\equiv \\delta \_{2y} U\_{i,j}.\\) | &nbsp; | (2.54) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\left.\\dfrac {\\partial U}{\\partial x}\\right|\_{i,j}\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\approx\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\frac{U\_{i+1,j} - U\_{i-1,j}}{2 \\Delta x} \\equiv \\delta \_{2x} U\_{i,j}.\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.53)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\left.\\dfrac {\\partial U}{\\partial y}\\right|\_{i,j}\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\approx\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\frac{U\_{i,j+1} - U\_{i,j-1}}{2 \\Delta y} \\equiv \\delta \_{2y} U\_{i,j}.\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.54)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 In general, finite difference approximations will involve a set of points surrounding \\(U\_{i,j}\\).
 

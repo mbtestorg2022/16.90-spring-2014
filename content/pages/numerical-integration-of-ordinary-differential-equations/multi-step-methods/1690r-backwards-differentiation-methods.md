@@ -6,7 +6,7 @@ title: 1.8 Multi-Step Methods
 uid: 998bd383-00b6-8dbd-2d38-c251f8262e37
 ---
 
-*   [<Adams-Moulton Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/multi-step-methods/1690r-adams-moulton-methods)
+*   [\<Adams-Moulton Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/multi-step-methods/1690r-adams-moulton-methods)
 *   [1.8.1Adams-Bashforth Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/multi-step-methods)
 *   [1.8.2Adams-Moulton Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/multi-step-methods/1690r-adams-moulton-methods)
 *   [1.8.3Backwards Differentiation Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/multi-step-methods/1690r-backwards-differentiation-methods)
@@ -20,15 +20,225 @@ uid: 998bd383-00b6-8dbd-2d38-c251f8262e37
 
 Backwards differentiation methods are some of the best multi-step methods for stiff problems. The backwards differentiation formulae are of the form,
 
-| \\\[v^{n+1} + \\sum \_{i=1}^ s \\alpha \_ i v^{n+1-i} = {\\Delta t}\\beta \_0 f^{n+1}. \\label{equ:bd}\\\] | (1.138) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[v^{n+1} + \\sum \_{i=1}^ s \\alpha \_ i v^{n+1-i} = {\\Delta t}\\beta \_0 f^{n+1}. \\label{equ:bd}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.138)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The coefficients for the first through fourth order methods are given in the table below.
 
-|  {{< br >}}{{< br >}} \\(p\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\alpha \_1\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\alpha \_2\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\alpha \_3\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\alpha \_4\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\beta \_0\\) {{< br >}}{{< br >}}  |
-|  {{< br >}}{{< br >}} 1 {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \-1 {{< br >}}{{< br >}}  | &nbsp; |  {{< br >}}{{< br >}} 1 {{< br >}}{{< br >}}  |
-|  {{< br >}}{{< br >}} 2 {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(-\\frac{4}{3}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{1}{3}\\) {{< br >}}{{< br >}}  | &nbsp; |  {{< br >}}{{< br >}} \\(\\frac{2}{3}\\) {{< br >}}{{< br >}}  |
-|  {{< br >}}{{< br >}} 3 {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(-\\frac{18}{11}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{9}{11}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(-\\frac{2}{11}\\) {{< br >}}{{< br >}}  | &nbsp; |  {{< br >}}{{< br >}} \\(\\frac{6}{11}\\) {{< br >}}{{< br >}}  |
-|  {{< br >}}{{< br >}} 4 {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(-\\frac{48}{25}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{36}{25}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(-\\frac{16}{25}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{3}{25}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{12}{25}\\) {{< br >}}{{< br >}}  
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+\\(p\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\alpha \_1\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\alpha \_2\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\alpha \_3\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\alpha \_4\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\beta \_0\\)
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+1
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\-1
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+1
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+2
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(-\\frac{4}{3}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{1}{3}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{2}{3}\\)
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+3
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(-\\frac{18}{11}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{9}{11}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(-\\frac{2}{11}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{6}{11}\\)
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+4
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(-\\frac{48}{25}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{36}{25}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(-\\frac{16}{25}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{3}{25}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{12}{25}\\)
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 **Table 4**: Coefficients for backward differentiation methods
 
@@ -103,7 +313,7 @@ for ii = 1:Nx-1,
     A(ii,ii-1) = k/h^2;
   end
 
-  if (ii < Nx-1),
+  if (ii \< Nx-1),
     A(ii,ii+1) = k/h^2;
   end
 

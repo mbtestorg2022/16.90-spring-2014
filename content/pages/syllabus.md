@@ -56,13 +56,66 @@ Having trouble reading an equation on these Unit pages, due to small font size? 
 
 The subject total grade will be based on the letter grades from the homework, projects, and exams. The weighting of the individual letter grades is as follows:
 
-| ACTIVITIES | PERCENTAGES |
-| --- | --- |
-| Homeworks (embedded reading questions and problem sets combined) | 12% |
-| Projects (each worth 12%, 3 total) | 36% |
-| Oral midterm exam | 25% |
-| Oral final exam | 25% |
-| Classroom participation | 2% 
+{{< tableopen >}}
+{{< theadopen >}}
+{{< tropen >}}
+{{< thopen >}}
+ACTIVITIES
+{{< thclose >}}
+{{< thopen >}}
+PERCENTAGES
+{{< thclose >}}
+
+{{< trclose >}}
+
+{{< theadclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Homeworks (embedded reading questions and problem sets combined)
+{{< tdclose >}}
+{{< tdopen >}}
+12%
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Projects (each worth 12%, 3 total)
+{{< tdclose >}}
+{{< tdopen >}}
+36%
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Oral midterm exam
+{{< tdclose >}}
+{{< tdopen >}}
+25%
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Oral final exam
+{{< tdclose >}}
+{{< tdopen >}}
+25%
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+Classroom participation
+{{< tdclose >}}
+{{< tdopen >}}
+2%
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 For the subject letter grade, we adhere to the MIT grading guidelines that give the following description of the letter grades:
 

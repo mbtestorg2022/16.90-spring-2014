@@ -6,7 +6,7 @@ title: 3.2 Review of Probability and Statistics
 uid: 48e310af-9f94-1a31-5e65-7482fc62956d
 ---
 
-*   [<Expectations]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-expectations)
+*   [\<Expectations]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-expectations)
 *   [3.2.1Random Variables]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics)
 *   [3.2.2Outcomes and Events]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-outcomes-and-events)
 *   [3.2.3Distributions]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-distributions)
@@ -26,13 +26,35 @@ Sums of Random Variables
 
 It is natural to ask whether there are more parallel properties that random variables and deterministic variables share. For example, we know that the sum of two deterministic variables is another deterministic variable. What can we say about the sum of two random variables? Quite obviously, the sum of two random variables \\(X\\) and \\(Y\\) is a new random variable,
 
-| \\\[Z=Z(X,Y)=X+Y\\\] | (3.17) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[Z=Z(X,Y)=X+Y\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.17)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 When we are adding two deterministic variables, we just have to add their values. What does it mean to add two random variables ?
 
 Since \\(Z\\) is a random variable, it is characterized by its probability distribution, and this probability distribution has to depend on the distributions of \\(X\\) and \\(Y\\). Suppose \\(X\\) and \\(Y\\) are independent, continuous random variables, and have densities \\(f\_ X\\) and \\(f\_ Y\\). Then the density \\(f\_ Z\\) is given by the convolution,
 
-| \\\[f\_ Z(z) = \\int \\limits \_{-\\infty }^{+\\infty } f\_{X}(x)f\_{Y}(z-x) \\, dx\\\] | (3.18) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[f\_ Z(z) = \\int \\limits \_{-\\infty }^{+\\infty } f\_{X}(x)f\_{Y}(z-x) \\, dx\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.18)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Thus, it is indeed possible to think about adding random variables, and the result of such an addition gives us the density of a new random variable via a convolution.
 
@@ -41,7 +63,18 @@ Examples of Sums of Two Random Variables
 
 As a first example, suppose \\(X\_1 \\sim \\mathcal{U}(0,1)\\) and \\(X2 \\sim \\mathcal{U}(0,1)\\), then the convolution above results in a density for a triangularly distributed random variable.
 
-| \\\[f\_{Z}(z) = \\left\\{ \\begin{array}{ll} z & \\mbox{for } 0 \\leq z \\leq 1, \\\\\[0.1in\] 2 - z & \\mbox{for } 1 \\leq z \\leq 2, \\\\\[0.1in\] 0 & \\mbox{otherwise } \\end{array}\\right.\\\] | (3.19) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[f\_{Z}(z) = \\left\\{ \\begin{array}{ll} z & \\mbox{for } 0 \\leq z \\leq 1, \\\\\[0.1in\] 2 - z & \\mbox{for } 1 \\leq z \\leq 2, \\\\\[0.1in\] 0 & \\mbox{otherwise } \\end{array}\\right.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.19)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The sum of these two uniformly distributed random variables \\(X\_1\\) and \\(X\_2\\) is a triangularly distributed random variable. Now suppose we add another random variable \\(X3 \\sim \\mathcal{U}(0,1)\\) to this sum, we again get a new random variable, but calculating its density using the convolution is not easy.
 
@@ -49,11 +82,33 @@ However, there is an important exception. Suppose \\(X\_1 \\sim \\mathcal{N}(1,1
 
 Further, if we average this sum we have,
 
-| \\\[\\frac{Z}{2} = \\frac{X\_1 + X\_2}{2} \\sim \\mathcal{N}(1,\\frac{1}{2})\\\] | (3.20) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\frac{Z}{2} = \\frac{X\_1 + X\_2}{2} \\sim \\mathcal{N}(1,\\frac{1}{2})\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.20)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 If we now add \\(X\_3 \\sim \\mathcal{N}(1,1)\\), and average over all three, we again get a normally distributed random with density \\(\\mathcal{N}(1,\\frac{1}{3})\\), and so on. Adding \\(N\\) independent, normal random variables with density \\(\\mathcal{N}(1,1)\\) we obtain,
 
-| \\\[\\frac{X\_1 + X\_2 + X\_3 + .... + X\_{N-1} + X\_ N}{N} \\sim \\mathcal{N}(1, \\frac{1}{N})\\\] | (3.21) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\frac{X\_1 + X\_2 + X\_3 + .... + X\_{N-1} + X\_ N}{N} \\sim \\mathcal{N}(1, \\frac{1}{N})\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.21)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Since this is true, no matter how large we make \\(N\\), we can say that it holds true as \\(N \\to \\infty\\).
 
@@ -64,7 +119,18 @@ We saw above that for the particular case of independent, identically and normal
 
 This is the basic result of the Central Limit Theorem, which tells us that if \\(X\_1\\), \\(X\_2\\), ... \\(X\_ N\\) are independent, identically distributed random variables, with \\(E(X\_1) = E(X\_2) = ... E(X\_ N) = \\mu\\) and \\(Var(X\_1) = Var(X\_2) = ... Var(X\_ N) = \\sigma ^2\\), then we have
 
-| \\\[\\frac{\\sum \\limits \_{i=1}^{N} X\_ i}{N} - \\mu \\to \\mathcal{N}(0, \\frac{\\sigma ^{2}}{N})\\\] | (3.22) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\frac{\\sum \\limits \_{i=1}^{N} X\_ i}{N} - \\mu \\to \\mathcal{N}(0, \\frac{\\sigma ^{2}}{N})\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.22)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 as \\(N \\to \\infty\\). So instead of averaging normals, if we kept averaging the uniform random variables that we added earlier, then eventually, the resultant random variable is guaranteed to have a normal distribution ! Not only that, the mean of this normal random variable will have the mean of the uniform random variables we added, and its variance will tend to zero.
 

@@ -6,7 +6,7 @@ title: 3.6 Introduction to Design Optimization
 uid: 6f317b0d-95c1-d32c-f178-c9fdbae632d2
 ---
 
-*   [<Importance Sampling]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/variance-reduction-techniques-for-the-monte-carlo-method/1690r-importance-sampling)
+*   [\<Importance Sampling]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/variance-reduction-techniques-for-the-monte-carlo-method/1690r-importance-sampling)
 *   [3.6.1Design Optimization]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/introduction-to-design-optimization)
 *   [3.6.2Gradient Based Optimization]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/introduction-to-design-optimization/1690r-gradient-based-optimization)
 *   [3.6.3Unconstrained Gradient-Based Optimization Methods]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/introduction-to-design-optimization/1690r-unconstrained-gradient-based-optimization-methods)
@@ -29,7 +29,18 @@ Engineers are often interested in solving design problems where the best possibl
 
 We will write our optimization problem as follows:
 
-| \\\[\\min \_ x J(x) \\\\ s.t. c(x) = 0 \\\\ g(x) \\leq 0 \\\\ x\_{i}^{l} \\leq x\_ i \\leq x\_{i}^{u}, i = 1, \\ldots , n.\\\] | (3.66) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\min \_ x J(x) \\\\ s.t. c(x) = 0 \\\\ g(x) \\leq 0 \\\\ x\_{i}^{l} \\leq x\_ i \\leq x\_{i}^{u}, i = 1, \\ldots , n.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.66)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Here, \\(x \\in \\mathbb {R}^ n\\) is the vector of \\(n\\) design variables, \\(J(x):\\mathbb {R}^ n \\to \\mathbb {R}\\) is the scalar objective function, \\(c(x):\\mathbb {R}^ n \\to \\mathbb {R}^{m\_1}\\) is a vector that defines the \\(m\_1\\) equality constraints, and \\(g(x):\\mathbb {R}^ n \\to \\mathbb {R}^{m\_2}\\) is a vector that defines the \\(m\_2\\) inequality constraints. \\(x\_{i}^{l} \\in \\mathbb {R}^ n\\) and \\(x\_{i}^{u} \\in \\mathbb {R}^ n\\) define lower and upper bounds, respectively, for the \\(i\\)th design variable \\(x\_ i\\).
 

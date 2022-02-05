@@ -6,7 +6,7 @@ title: 2.9 Introduction to Finite Elements
 uid: e47fb6af-9d83-9e3b-073e-b5053c6c2226
 ---
 
-*   [<Calculation of the Finite Element Weighted Residual]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-calculation-of-the-finite-element-weighted-residual)
+*   [\<Calculation of the Finite Element Weighted Residual]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-calculation-of-the-finite-element-weighted-residual)
 *   [2.9.1Motivation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements)
 *   [2.9.21-D Finite Element Mesh and Notation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-1-d-finite-element-mesh-and-notation)
 *   [2.9.31-D Linear Elements and the Nodal Basis]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-1-d-linear-elements-and-the-nodal-basis)
@@ -22,7 +22,18 @@ uid: e47fb6af-9d83-9e3b-073e-b5053c6c2226
 
 For the steady diffusion problem we have been considering in this chapter, the finite element method results in a linear system of equations of the form
 
-| \\\[Ka = F,\\\] | (2.220) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[Ka = F,\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.220)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(K\\) is commonly referred to as the **stiffness matrix**. The unknown coefficients \\(a\_ i\\) of the solution approximation are in the vector \\(a\\). The right-hand side vector \\(F\\) represents the term \\(\\int \_{-L/2}^{L/2} \\phi \_ j f dx\\) as well as boundary conditions. The calculation of \\(K\\) and \\(F\\) for the finite element method is commonly performed by looping over each element and sending the contributions from each element to the proper entry in \\(K\\) and \\(F\\).
 

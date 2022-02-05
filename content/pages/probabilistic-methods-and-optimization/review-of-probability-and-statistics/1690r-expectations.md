@@ -6,7 +6,7 @@ title: 3.2 Review of Probability and Statistics
 uid: f11bfbbc-299e-7603-ff39-0e8071fc595e
 ---
 
-*   [<Distributions]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-distributions)
+*   [\<Distributions]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-distributions)
 *   [3.2.1Random Variables]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics)
 *   [3.2.2Outcomes and Events]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-outcomes-and-events)
 *   [3.2.3Distributions]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-distributions)
@@ -28,7 +28,18 @@ Expected Value and Mean
 
 Given a random variable \\(X\\) with PDF \\(f\_ X(x)\\), the expected value is defined as,
 
-| \\\[E\\{ X\\} \\equiv \\int \_{-\\infty }^{+\\infty } x f\_ X(x)\\, dx\\\] | (3.13) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[E\\{ X\\} \\equiv \\int \_{-\\infty }^{+\\infty } x f\_ X(x)\\, dx\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.13)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The expected value of \\(X\\) is also known as the mean value. We will also use the symbol \\(\\mu \_ X\\) for the expected value of \\(X\\).
 
@@ -37,11 +48,33 @@ Variance and Standard Deviation
 
 The variance is a measure of the variability in \\(X\\) about its mean value. The variance of \\(X\\) is defined as,
 
-| \\\[\\sigma \_ X^2 \\equiv \\int \_{-\\infty }^{+\\infty } (x - \\mu \_ X)^2 f\_ X(x)\\, dx.\\\] | (3.14) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\sigma \_ X^2 \\equiv \\int \_{-\\infty }^{+\\infty } (x - \\mu \_ X)^2 f\_ X(x)\\, dx.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.14)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The value \\(\\sigma \_ X\\) is known as the standard deviation of \\(X\\). A frequently used relationship exists between the mean and variance,
 
-| \\\[\\sigma \_ X^2 = E\\{ X^2\\} - \\mu \_ X^2.\\\] | (3.15) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\sigma \_ X^2 = E\\{ X^2\\} - \\mu \_ X^2.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.15)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Try proving this!
 
@@ -50,7 +83,18 @@ Percentiles
 
 The \\(u\\) percentile of \\(X\\) is the smallest number \\(x\_ u\\) such that,
 
-| \\\[u = P\\{ X \\leq x\_ u\\} = F(x\_ u).\\\] | (3.16) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[u = P\\{ X \\leq x\_ u\\} = F(x\_ u).\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.16)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Note, since \\(u\\) is a probability, its range is \\(0 \\leq u \\leq 1\\).
 

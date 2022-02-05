@@ -6,7 +6,7 @@ title: 2.9 Introduction to Finite Elements
 uid: cc8eecdb-7e89-e1db-ce16-2f90e5ff68fb
 ---
 
-*   [<Introduction to Finite Elements]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements)
+*   [\<Introduction to Finite Elements]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements)
 *   [2.9.1Motivation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements)
 *   [2.9.21-D Finite Element Mesh and Notation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-1-d-finite-element-mesh-and-notation)
 *   [2.9.31-D Linear Elements and the Nodal Basis]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-1-d-linear-elements-and-the-nodal-basis)
@@ -28,6 +28,17 @@ Consider a mesh of one-dimensional elements as shown in Figure [2.35]({{< baseu
 
 As shown in the figure, element \\(j\\) is the region from \\(x\_{j} \\leq x \\leq x\_{j+1}\\). Note, each element can have its own length,
 
-| \\\[\\Delta x\_ j \\equiv x\_{j+1} - x\_ j.\\\] | (2.198) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\Delta x\_ j \\equiv x\_{j+1} - x\_ j.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.198)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 BackIntroduction to Finite Elements Continue1-D Linear Elements and the Nodal Basis

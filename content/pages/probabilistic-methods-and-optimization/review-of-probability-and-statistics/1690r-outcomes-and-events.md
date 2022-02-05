@@ -6,7 +6,7 @@ title: 3.2 Review of Probability and Statistics
 uid: a3d2bfd5-90c2-ddaf-a1c4-73639ba4be5e
 ---
 
-*   [<Review of Probability and Statistics]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics)
+*   [\<Review of Probability and Statistics]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics)
 *   [3.2.1Random Variables]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics)
 *   [3.2.2Outcomes and Events]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-outcomes-and-events)
 *   [3.2.3Distributions]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-distributions)

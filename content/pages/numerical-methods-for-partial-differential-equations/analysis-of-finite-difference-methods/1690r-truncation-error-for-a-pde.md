@@ -6,7 +6,7 @@ title: 2.4 Analysis of Finite Difference Methods
 uid: ba32080c-16da-eb92-bc6f-615dc10a7e31
 ---
 
-*   [<Truncation Error of Central Difference Approximation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/analysis-of-finite-difference-methods/1690r-truncation-error-of-central-difference-approximation)
+*   [\<Truncation Error of Central Difference Approximation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/analysis-of-finite-difference-methods/1690r-truncation-error-of-central-difference-approximation)
 *   [2.4.1Local Truncation Error for a Derivative Approximation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/analysis-of-finite-difference-methods)
 *   [2.4.2Truncation Error of Central Difference Approximation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/analysis-of-finite-difference-methods/1690r-truncation-error-of-central-difference-approximation)
 *   [2.4.3Truncation Error for a PDE]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/analysis-of-finite-difference-methods/1690r-truncation-error-for-a-pde)
@@ -24,7 +24,18 @@ In the discussion of ODE integration, we used the ideas of consistency and stabi
 
 Similar to the ODE case, the truncation error is **defined as the remainder after an exact solution to the governing equation is substituted into the finite difference approximation**. For example, suppose we are using the FTCS algorithm in Equation ([2.57](javascript: void(0))) to approximate the one-dimensional convection-diffusion equation. Then the local truncation error for the PDE approximation is defined as,
 
-| \\\[\\tau \\equiv \\frac{U\_ i^{n+1}-U\_ i^ n}{{\\Delta t}} + u\_{i}^ n\\delta \_{2x} U^ n\_{i} - \\mu \\delta ^2\_ x U^ n\_{i}, \\label{equ:lte\_ ftcs}\\\] | (2.65) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\tau \\equiv \\frac{U\_ i^{n+1}-U\_ i^ n}{{\\Delta t}} + u\_{i}^ n\\delta \_{2x} U^ n\_{i} - \\mu \\delta ^2\_ x U^ n\_{i}, \\label{equ:lte\_ ftcs}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.65)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(U(x,t)\\) is an exact solution to Equation ([2.55](javascript: void(0))).
 
@@ -32,22 +43,150 @@ Note that the truncation error defined here for PDE's is not quite a direct anal
 
 Except for this difference in the definition, the calculation of the local truncation follows the same procedure as in the ODE case in which Taylor series substitutions are used to expand the error in powers of \\({\\Delta t}\\). Continuing on with our example, we use Taylor series of \\(U\\) about \\(t=t^ n\\) and \\(x=x\_ i\\). However, we can use our previous results from the analysis of the truncation error of spatial derivatives. Specifically, we showed in during in-class discussions that,
 
-| &nbsp; | \\(\\displaystyle \\delta \_{2x} U\_ i\\) | \\(\\displaystyle =\\) | \\(\\displaystyle {U\_ x}\_ i + \\frac{1}{6} {\\scriptstyle \\Delta } x^2 {U\_{xxx}}\_ i + O({\\scriptstyle \\Delta } x^4)\\) | &nbsp; | (2.66) |
-| &nbsp; | \\(\\displaystyle \\delta \_{x}^{2} U\_ i\\) | \\(\\displaystyle =\\) | \\(\\displaystyle {U\_{xx}}\_ i + \\frac{1}{12}{\\scriptstyle \\Delta } x^2 {U\_{xxxx}}\_ i + O({\\scriptstyle \\Delta } x^4)\\) | &nbsp; | (2.67) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\delta \_{2x} U\_ i\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle {U\_ x}\_ i + \\frac{1}{6} {\\scriptstyle \\Delta } x^2 {U\_{xxx}}\_ i + O({\\scriptstyle \\Delta } x^4)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.66)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\delta \_{x}^{2} U\_ i\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle {U\_{xx}}\_ i + \\frac{1}{12}{\\scriptstyle \\Delta } x^2 {U\_{xxxx}}\_ i + O({\\scriptstyle \\Delta } x^4)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.67)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Using these results,
 
-| \\\[\\tau = \\frac{U\_ i^{n+1}-U\_ i^ n}{{\\Delta t}} + u\_{i}^ n\\left\[{U\_ x}\_ i^ n + \\frac{1}{6}{\\scriptstyle \\Delta } x^2 {U\_{xxx}}\_ i^ n + O({\\scriptstyle \\Delta } x^4) \\right\] - \\mu \\left\[{U\_{xx}}\_ i^ n + \\frac{1}{12}{\\scriptstyle \\Delta } x^2 {U\_{xxxx}}\_ i^ n + O({\\scriptstyle \\Delta } x^4) \\right\]\\\] | (2.68) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\tau = \\frac{U\_ i^{n+1}-U\_ i^ n}{{\\Delta t}} + u\_{i}^ n\\left\[{U\_ x}\_ i^ n + \\frac{1}{6}{\\scriptstyle \\Delta } x^2 {U\_{xxx}}\_ i^ n + O({\\scriptstyle \\Delta } x^4) \\right\] - \\mu \\left\[{U\_{xx}}\_ i^ n + \\frac{1}{12}{\\scriptstyle \\Delta } x^2 {U\_{xxxx}}\_ i^ n + O({\\scriptstyle \\Delta } x^4) \\right\]\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.68)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Then, performing a similar Taylor series of the time derivative approximation gives,
 
-| \\\[\\frac{U^{n+1} - U^ n}{{\\Delta t}} = {U\_ t}^ n + \\frac{1}{2}{\\Delta t}{U\_{tt}}^ n + O({\\Delta t}^2).\\\] | (2.69) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\frac{U^{n+1} - U^ n}{{\\Delta t}} = {U\_ t}^ n + \\frac{1}{2}{\\Delta t}{U\_{tt}}^ n + O({\\Delta t}^2).\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.69)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Substituting this into \\(\\tau\\) and collecting terms in powers of \\({\\Delta t}\\) and \\({\\scriptstyle \\Delta } x\\) gives,
 
-| &nbsp; | \\(\\displaystyle \\tau\\) | \\(\\displaystyle =\\) | \\(\\displaystyle {U\_ t}^ n\_ i + u\_{i}^ n {U\_ x}\_ i^ n - \\mu {U\_{xx}}\_ i^ n +\\) | &nbsp; | (2.70) |
-| &nbsp; | \\(\\displaystyle \\frac{1}{2}{\\Delta t}{U\_{tt}}^ n\_ i + O({\\Delta t}^2) +\\) | &nbsp; | (2.71) |
-| &nbsp; | \\(\\displaystyle \\frac{1}{6}{\\scriptstyle \\Delta } x^2 u\_{i}^ n {U\_{xxx}}\_ i^ n - \\frac{1}{12}{\\scriptstyle \\Delta } x^2 \\mu {U\_{xxxx}}\_ i^ n + O({\\scriptstyle \\Delta } x^4)\\) | &nbsp; | (2.72) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\tau\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle {U\_ t}^ n\_ i + u\_{i}^ n {U\_ x}\_ i^ n - \\mu {U\_{xx}}\_ i^ n +\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.70)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\frac{1}{2}{\\Delta t}{U\_{tt}}^ n\_ i + O({\\Delta t}^2) +\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.71)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\frac{1}{6}{\\scriptstyle \\Delta } x^2 u\_{i}^ n {U\_{xxx}}\_ i^ n - \\frac{1}{12}{\\scriptstyle \\Delta } x^2 \\mu {U\_{xxxx}}\_ i^ n + O({\\scriptstyle \\Delta } x^4)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.72)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The first line of this equation is actually just the PDE, evaluated at \\(t=t^ n\\) and \\(x=x\_ i\\). Since \\(U\\) is an exact solution to the PDE, this is zero. The second line shows that the time discretization introduces an \\(O({\\Delta t})\\). The third line shows that the spatial discretization introduces an \\(O({\\scriptstyle \\Delta } x^2)\\) error. Thus, this numerical method is first-order accurate in time and second-order accurate in space.
 

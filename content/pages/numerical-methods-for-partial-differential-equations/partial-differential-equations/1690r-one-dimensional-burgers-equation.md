@@ -6,7 +6,7 @@ title: 2.2 Partial Differential Equations
 uid: 53d47d94-d1a2-5853-95d6-3d7a71ad1144
 ---
 
-*   [<Partial Differential Equations]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations)
+*   [\<Partial Differential Equations]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations)
 *   [2.2.1Conservation Laws in Integral and Differential Form]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations)
 *   [2.2.2One-Dimensional Burgers Equation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations/1690r-one-dimensional-burgers-equation)
 *   [2.2.3Convection]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations/1690r-convection)
@@ -23,7 +23,18 @@ uid: 53d47d94-d1a2-5853-95d6-3d7a71ad1144
 
 Burgers' equation is a fundamental partial differential equation from fluid mechanics. It occurs in various areas, such as modeling of gas dynamics and traffic flow. It is named for Johannes Martinus Burgers (1895-1981). The one-dimensional Burgers' equation is given in differential form as:
 
-| \\\[\\frac{\\partial u}{\\partial t} + u \\frac{\\partial u}{\\partial x} = 0 \\label{equ:burgers}\\\] | (2.17) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\frac{\\partial u}{\\partial t} + u \\frac{\\partial u}{\\partial x} = 0 \\label{equ:burgers}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.17)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 {{< quiz_multiple_choice questionId="Q1_div" >}}{{< quiz_choices >}}{{< quiz_choice isCorrect="false" >}}&nbsp; \\(U=u, \\vec{F}=u\\) &nbsp;{{< /quiz_choice >}}
 {{< quiz_choice isCorrect="false" >}}&nbsp; \\(U=u, \\vec{F}=u^2\\) &nbsp;{{< /quiz_choice >}}

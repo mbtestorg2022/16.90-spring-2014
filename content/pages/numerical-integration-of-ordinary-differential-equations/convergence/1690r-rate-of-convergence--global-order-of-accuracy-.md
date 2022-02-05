@@ -6,7 +6,7 @@ title: 1.4 Convergence
 uid: bc0d43fe-1169-e2be-34aa-cfba7fd50607
 ---
 
-*   [<Convergence of Numerical Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/convergence/1690r-convergence-of-numerical-methods)
+*   [\<Convergence of Numerical Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/convergence/1690r-convergence-of-numerical-methods)
 *   [1.4.1Types of Errors]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/convergence)
 *   [1.4.2Convergence of Numerical Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/convergence/1690r-convergence-of-numerical-methods)
 *   [1.4.3Rate of Convergence Global Order of Accuracy]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/convergence/1690r-rate-of-convergence--global-order-of-accuracy-)
@@ -24,7 +24,18 @@ Definition of Global Accuracy
 
 A method has a global order of accuracy of \\(p\\) if,
 
-| \\\[\\max \_{n=\[0,T/{\\Delta t}\]} &#124;v^ n-u(n {\\Delta t})&#124; \\leq \\mathcal{O}({\\Delta t}^ p) \\qquad \\mbox{as} \\qquad {\\Delta t}\\rightarrow 0,\\\] | (1.65) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\max \_{n=\[0,T/{\\Delta t}\]} |v^ n-u(n {\\Delta t})| \\leq \\mathcal{O}({\\Delta t}^ p) \\qquad \\mbox{as} \\qquad {\\Delta t}\\rightarrow 0,\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.65)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 for any \\(f(u,t)\\) that has \\(p\\) continuous derivatives (i.e. up to and including \\({\\partial ^ p f}/{\\partial t^ p}\\) and \\({\\partial ^ p f}/{\\partial u^ p}\\)).
 
@@ -37,7 +48,18 @@ Forward Euler and Midpoint accuracy on example problem
 
 To demonstrate the ideas of global accuracy, we will consider an ODE with
 
-| \\\[f = -u^2 \\label{equ:ga}\\\] | (1.66) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[f = -u^2 \\label{equ:ga}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.66)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 and an initial condition of \\(u(0) = 1\\). The solution to this ODE is \\(u = (1+t)^{-1}\\). Now, let us apply the forward Euler method to solving this problem for \\(t=0\\) to \\(10\\). The approximate solutions for a range of \\({\\Delta t}\\) are shown Figure [1.5]({{< baseurl >}}/resources/ga_fe) along with the exact solution.
 

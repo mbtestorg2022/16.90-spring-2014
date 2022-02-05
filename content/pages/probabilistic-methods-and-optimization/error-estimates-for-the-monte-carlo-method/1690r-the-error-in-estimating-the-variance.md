@@ -6,7 +6,7 @@ title: 3.4 Error Estimates for the Monte Carlo Method
 uid: 9fcaf3a2-fde9-2040-23cd-8a8ace84e37f
 ---
 
-*   [<The Error in Estimating Probabilities]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/error-estimates-for-the-monte-carlo-method/1690r-the-error-in-estimating-probabilities)
+*   [\<The Error in Estimating Probabilities]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/error-estimates-for-the-monte-carlo-method/1690r-the-error-in-estimating-probabilities)
 *   [3.4.1The Error in Estimating the Mean]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/error-estimates-for-the-monte-carlo-method)
 *   [3.4.2The Error in Estimating Probabilities]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/error-estimates-for-the-monte-carlo-method/1690r-the-error-in-estimating-probabilities)
 *   [3.4.3The Error in Estimating the Variance]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/error-estimates-for-the-monte-carlo-method/1690r-the-error-in-estimating-the-variance)
@@ -23,21 +23,65 @@ The Error in Estimating the Variance
 
 The variance of \\(y\\) is given the symbol, \\(\\sigma \_ y^2\\), and is defined as,
 
-| \\\[\\sigma \_ y^2 = E\[(y-\\mu \_ y)^2\] \\label{equ:variance}\\\] | (3.52) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\sigma \_ y^2 = E\[(y-\\mu \_ y)^2\] \\label{equ:variance}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.52)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 We saw in the previous unit that an unbiased estimator of \\(\\sigma \_ y^2\\) is \\(s\_ y^2\\), that is:
 
-| \\\[E\[s\_ y^2\] = \\sigma \_ y^2.\\\] | (3.53) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[E\[s\_ y^2\] = \\sigma \_ y^2.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.53)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Note, you should try proving this result.
 
 To quantify the uncertainty in this estimator, we would like to determine the standard error,
 
-| \\\[\\sigma \_{s^2\_ y} \\equiv \\left\\{ E\\left\[(s\_ y^2-\\sigma \_ y^2)^2\\right\]\\right\\} ^{1/2}.\\\] | (3.54) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\sigma \_{s^2\_ y} \\equiv \\left\\{ E\\left\[(s\_ y^2-\\sigma \_ y^2)^2\\right\]\\right\\} ^{1/2}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.54)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Unfortunately, this standard error is not known for general distributions of \\(y\\). However, if \\(y\\) has a normal distribution, then,
 
-| \\\[\\sigma \_{s^2\_ y} = \\frac{\\sigma \_ y^2}{\\sqrt {N/2}} \\label{equ:se\_ s2y\_ normal}\\\] | (3.55) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\sigma \_{s^2\_ y} = \\frac{\\sigma \_ y^2}{\\sqrt {N/2}} \\label{equ:se\_ s2y\_ normal}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.55)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Under the assumption of \\(y\\) being normally distributed, the distribution of \\(s^2\_ y\\) is also related to the chi-squared distribution. Specifically, \\((N-1)s^2\_ y/\\sigma ^2\_ y\\) has a chi-square distribution with \\(N-1\\) degrees of freedom. Note that the requirement that \\(y\\) be normally distributed is much more restrictive than the requirements for the mean error estimates to hold. For the mean error estimates, the standard error, \\(\\sigma \_{\\overline{y}} = \\sigma \_ y/\\sqrt {N}\\), is exact regardless of the distribution of \\(y\\). The application of the central limit theorem which gives that\\(\\overline{y}\\) is normally distributed only requires that the number of samples is large but does not constrain the distribution of \\(y\\) itself (beyond requiring that \\(f(y)\\) is continuous).
 
@@ -46,10 +90,32 @@ Standard Deviation
 
 Typically, the standard deviation of \\(y\\) is estimated using \\(s\_ y\\), i.e. the square root of the variance estimator. This estimate, however, is biased,
 
-| \\\[E\[s\_ y\] \\neq \\sigma \_ y.\\\] | (3.56) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[E\[s\_ y\] \\neq \\sigma \_ y.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.56)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The standard error for this estimate is only known exactly when \\(y\\) is normally distributed. In that case,
 
-| \\\[\\sigma \_{s\_ y} \\equiv \\left\\{ E\[(s\_ y-\\sigma \_ y)^2\]\\right\\} ^{1/2} = \\frac{\\sigma \_ y}{\\sqrt {2N}}.\\\] | (3.57) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\sigma \_{s\_ y} \\equiv \\left\\{ E\[(s\_ y-\\sigma \_ y)^2\]\\right\\} ^{1/2} = \\frac{\\sigma \_ y}{\\sqrt {2N}}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.57)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 BackThe Error in Estimating Probabilities ContinueBootstrapping

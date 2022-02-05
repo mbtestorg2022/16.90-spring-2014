@@ -6,7 +6,7 @@ title: 2.9 Introduction to Finite Elements
 uid: 2f262139-b40f-5261-66c9-51230f32cd54
 ---
 
-*   [<1-D Linear Elements and the Nodal Basis]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-1-d-linear-elements-and-the-nodal-basis)
+*   [\<1-D Linear Elements and the Nodal Basis]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-1-d-linear-elements-and-the-nodal-basis)
 *   [2.9.1Motivation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements)
 *   [2.9.21-D Finite Element Mesh and Notation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-1-d-finite-element-mesh-and-notation)
 *   [2.9.31-D Linear Elements and the Nodal Basis]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-elements/1690r-1-d-linear-elements-and-the-nodal-basis)
@@ -22,31 +22,97 @@ uid: 2f262139-b40f-5261-66c9-51230f32cd54
 
 In this section, we will concentrate on the one-dimensional, steady diffusion equation with a source term. As previously noted in Equation ([2.149](javascript: void(0))), the one-dimensional steady diffusion equation with a source term is
 
-| \\\[\\left(k T\_ x\\right)\_ x = -f,\\\] | (2.204) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\left(k T\_ x\\right)\_ x = -f,\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.204)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(k(x)\\) thermal conductivity of the material and \\(f(x)\\) is the heat source (per unit length). Note that both \\(k\\) and \\(f\\) could be functions of \\(x\\). Also, let the physical domain for the problem be from \\(x=-L/2\\) to \\(x=L/2\\).
 
 The residual corresponding to this equation is
 
-| \\\[R(\\tilde{T},x) \\equiv \\left(k \\tilde{T}\_ x\\right)\_ x + f. \\label{equ:dif1d\_ steady\_ residual}\\\] | (2.205) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[R(\\tilde{T},x) \\equiv \\left(k \\tilde{T}\_ x\\right)\_ x + f. \\label{equ:dif1d\_ steady\_ residual}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.205)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 For an arbitrary weight function, \\(w(x)\\), the weighted residual is defined as
 
-| \\\[\\int \_{-L/2}^{L/2} w(x) R(\\tilde{T},x)\\, dx = \\int \_{-L/2}^{L/2} w \\left\[ \\left(k \\tilde{T}\_ x\\right)\_ x + f\\right\] dx.\\\] | (2.206) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{-L/2}^{L/2} w(x) R(\\tilde{T},x)\\, dx = \\int \_{-L/2}^{L/2} w \\left\[ \\left(k \\tilde{T}\_ x\\right)\_ x + f\\right\] dx.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.206)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 A general notation for the weighted residual is \\(r(v,w)\\), where the first entry \\(v(x)\\) is the approximate solution (\\(v(x)=\\tilde{T}(x)\\) in our example) and the second entry \\(w(x)\\) is the weight function. The finite element method (or more generally the method of weighted residuals) can be thought of as finding the \\(v(x)\\) for which \\(r(v,w)=0\\) for all of the weight functions. If the approximate solution is a linear combination of \\(M\\) functions, \\(\\phi \_ i(x)\\), then \\(v(x)\\) can be written as,
 
-| \\\[v(x) = \\sum \_{i=1}^ Ma\_ i\\phi \_ i(x).\\\] | (2.207) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[v(x) = \\sum \_{i=1}^ Ma\_ i\\phi \_ i(x).\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.207)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Further, if the Galerkin method of weighted residuals is used, then the weight functions will be the set \\(\\phi \_ i(x)\\), i.e.,
 
-| \\\[w \\in \\left\[\\phi \_1(x), \\phi \_2(x), \\ldots , \\phi \_ M(x) \\right\].\\\] | (2.208) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[w \\in \\left\[\\phi \_1(x), \\phi \_2(x), \\ldots , \\phi \_ M(x) \\right\].\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.208)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Then, the Galerkin method of weighted residuals can be written as: Find the set of \\(a\_ i\\) such that \\(v(x)=\\sum \_{i=1}^ Ma\_ i\\phi \_ i(x)\\) has \\(r(v, \\phi \_ j) =0\\) for all weight functions \\(\\phi \_ j(x)\\), \\(j=1,\\ldots ,M\\).
 
 For the diffusion equation, the weighted residual statement is usually integrated by parts so that the number of derivatives on the weight function and the approximate solution (\\(v(x)=\\tilde{T}(x)\\)) are equal. Thus, performing integration by parts gives the weighted residual for the diffusion equation as
 
-| \\\[\\label{equ:intByParts} r(\\tilde{T}, w) = \\left\[w\\, k \\tilde{T}\_ x\\right\]^{L/2}\_{-L/2} - \\int \_{-L/2}^{L/2} w\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{-L/2}^{L/2} w f\\, dx.\\\] | (2.209) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\label{equ:intByParts} r(\\tilde{T}, w) = \\left\[w\\, k \\tilde{T}\_ x\\right\]^{L/2}\_{-L/2} - \\int \_{-L/2}^{L/2} w\_ x\\, k \\tilde{T}\_ x\\, dx + \\int \_{-L/2}^{L/2} w f\\, dx.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.209)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The first term is on the boundaries of the domain and its use in setting boundary conditions is discussed in Section [2.10.2]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/more-on-finite-element-methods/1690r-boundary-conditions-for-finite-elements). The second and third terms are integrals over the entire domain.
 
@@ -57,7 +123,18 @@ Exercise
 
 The Euler-Bernoulli beam equation is a model for the deflection \\(w(x)\\) of a beam subjected to lateral loading, specifically
 
-| \\\[(EIw\_{xx})\_{xx} = q(x),\\\] | (2.210) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[(EIw\_{xx})\_{xx} = q(x),\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.210)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 {{< quiz_multiple_choice questionId="Q1_div" >}}{{< quiz_choices >}}{{< quiz_choice isCorrect="false" >}}&nbsp; \\(\\int \_0^ L\\phi (EIv\_{xx})\_{xx}dx + \\left\[\\phi (EIv\_{xx})\_ x - \\phi \_ xEIv\_{xx}\\right\]\_0^ L = \\int \_0^ Lq\\phi \\ dx\\) &nbsp;{{< /quiz_choice >}}
 {{< quiz_choice isCorrect="false" >}}&nbsp; \\(\\int \_0^ L\\phi \_{x}EIv\_{xx}dx + \\left\[\\phi (EIv\_{xx}) - \\phi \_ xEIv\_{xx}\\right\]\_0^ L = \\int \_0^ Lq\\phi \\ dx\\) &nbsp;{{< /quiz_choice >}}

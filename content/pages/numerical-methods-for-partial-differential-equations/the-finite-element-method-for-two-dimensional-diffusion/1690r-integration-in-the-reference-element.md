@@ -6,7 +6,7 @@ title: 2.11 The Finite Element Method for Two-Dimensional Diffusion
 uid: cd2d971f-e847-d266-f0b1-555caab639d4
 ---
 
-*   [<Construction of the Stiffness Matrix]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/the-finite-element-method-for-two-dimensional-diffusion/1690r-construction-of-the-stiffness-matrix)
+*   [\<Construction of the Stiffness Matrix]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/the-finite-element-method-for-two-dimensional-diffusion/1690r-construction-of-the-stiffness-matrix)
 *   [2.11.1Overview]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/the-finite-element-method-for-two-dimensional-diffusion)
 *   [2.11.2Reference Element and Linear Elements]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/the-finite-element-method-for-two-dimensional-diffusion/1690r-reference-element-and-linear-elements)
 *   [2.11.3Differentiation using the Reference Element]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/the-finite-element-method-for-two-dimensional-diffusion/1690r-differentiation-using-the-reference-element)
@@ -21,14 +21,47 @@ uid: cd2d971f-e847-d266-f0b1-555caab639d4
 
 The reference element can also be used to evaluate integrals. For example, consider the evaluation of the forcing function integral within an element:
 
-| \\\[\\int \_{\\delta \\Omega \_ k} w(\\vec{x})\\, f(\\vec{x})\\, dA.\\\] | (2.285) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{\\delta \\Omega \_ k} w(\\vec{x})\\, f(\\vec{x})\\, dA.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.285)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 In transforming the integral from \\((x,y)\\) to \\((\\xi \_1,\\xi \_2)\\), the differential area of integration must be transformed using the following result:
 
-| \\\[dA = dx\\, dy = J d\\xi \_1\\, d\\xi \_2 = J\\, dA\_{\\xi }. \\label{equ:Ax\_ to\_ Axi}\\\] | (2.286) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[dA = dx\\, dy = J d\\xi \_1\\, d\\xi \_2 = J\\, dA\_{\\xi }. \\label{equ:Ax\_ to\_ Axi}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.286)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Thus, the integrals can now be evaluated in reference element space,
 
-| \\\[\\int \_{\\Omega \_{\\xi }} w(\\vec{x}(\\vec{\\xi }))\\, f(\\vec{x}(\\vec{\\xi }))\\, J dA\_{\\xi }.\\\] | (2.287) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\int \_{\\Omega \_{\\xi }} w(\\vec{x}(\\vec{\\xi }))\\, f(\\vec{x}(\\vec{\\xi }))\\, J dA\_{\\xi }.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.287)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 BackConstruction of the Stiffness Matrix ContinueProbabilistic Methods and Optimization

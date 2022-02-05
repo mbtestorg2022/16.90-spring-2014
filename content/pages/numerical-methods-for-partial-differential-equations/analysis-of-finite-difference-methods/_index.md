@@ -6,7 +6,7 @@ title: 2.4 Analysis of Finite Difference Methods
 uid: c9ae23f7-07d4-0d5c-c85b-b19ebf476df0
 ---
 
-*   [<Forward Time-Backward Space FTBS]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-difference-methods/1690r-forward-time-backward-space--ftbs-)
+*   [\<Forward Time-Backward Space FTBS]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-difference-methods/1690r-forward-time-backward-space--ftbs-)
 *   [2.4.1Local Truncation Error for a Derivative Approximation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/analysis-of-finite-difference-methods)
 *   [2.4.2Truncation Error of Central Difference Approximation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/analysis-of-finite-difference-methods/1690r-truncation-error-of-central-difference-approximation)
 *   [2.4.3Truncation Error for a PDE]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/analysis-of-finite-difference-methods/1690r-truncation-error-for-a-pde)
@@ -24,10 +24,93 @@ In the discussion of ODE integration, we used the ideas of consistency and stabi
 
 Suppose we use a backwards difference, \\(\\delta \_ x^- U\_ i\\) to approximate the first derivative, \\(U\_ x\\) at point \\(i\\). The local truncation error for this derivative approximation can be calculated using Taylor series as we have done in the past:
 
-| &nbsp; | \\(\\displaystyle \\tau\\) | \\(\\displaystyle \\equiv\\) | \\(\\displaystyle \\delta \_ x^{-} U\_ i - {U\_ x}\_ i ,\\) | &nbsp; | (2.61) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle \\frac{1}{{\\scriptstyle \\Delta } x}\\left( U\_ i - U\_{i-1}\\right) - {U\_ x}\_ i,\\) | &nbsp; | (2.62) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle \\frac{1}{{\\scriptstyle \\Delta } x}\\left\[ U\_ i - \\left( U\_ i - {\\scriptstyle \\Delta } x{U\_ x}\_ i + \\frac{1}{2}{\\scriptstyle \\Delta } x^2{U\_{xx}}\_ i + O({\\scriptstyle \\Delta } x^3)\\right)\\right\] - {U\_ x}\_ i,\\) | &nbsp; | (2.63) |
-| &nbsp; | \\(\\displaystyle =\\) | \\(\\displaystyle -\\frac{1}{2}{\\scriptstyle \\Delta } x{U\_{xx}}\_ i + O({\\scriptstyle \\Delta } x^2).\\) | &nbsp; | (2.64) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\tau\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\equiv\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\delta \_ x^{-} U\_ i - {U\_ x}\_ i ,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.61)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\frac{1}{{\\scriptstyle \\Delta } x}\\left( U\_ i - U\_{i-1}\\right) - {U\_ x}\_ i,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.62)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\frac{1}{{\\scriptstyle \\Delta } x}\\left\[ U\_ i - \\left( U\_ i - {\\scriptstyle \\Delta } x{U\_ x}\_ i + \\frac{1}{2}{\\scriptstyle \\Delta } x^2{U\_{xx}}\_ i + O({\\scriptstyle \\Delta } x^3)\\right)\\right\] - {U\_ x}\_ i,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.63)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle -\\frac{1}{2}{\\scriptstyle \\Delta } x{U\_{xx}}\_ i + O({\\scriptstyle \\Delta } x^2).\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.64)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Thus, the analysis shows that the backwards difference is a first-order accurate discretization of the derivative at node \\(i\\).
 

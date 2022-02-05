@@ -6,7 +6,7 @@ title: 3.3 Monte Carlo Methods
 uid: 91c4e401-232c-3823-cf38-1f612b323bb6
 ---
 
-*   [<Monte Carlo Example]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/monte-carlo-methods/1690r-monte-carlo-example)
+*   [\<Monte Carlo Example]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/monte-carlo-methods/1690r-monte-carlo-example)
 *   [3.3.1Introduction]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/monte-carlo-methods)
 *   [3.3.2Monte Carlo Analysis]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/monte-carlo-methods/1690r-monte-carlo-analysis)
 *   [3.3.3Monte Carlo Example]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/monte-carlo-methods/1690r-monte-carlo-example)
@@ -25,11 +25,33 @@ Inversion Method for Generating Random Numbers
 
 In these notes, we will discuss the inversion method for generating random numbers with non-uniform distributions. While other methods exist for generating random numbers, they are often based on the inversion method. The basic principle of the inversion method is to utilize the inverse of the cumulative distribution function (CDF) to transform a uniform distribution to a desired distribution. Recall that the CDF is defined as the integral of the PDF,
 
-| \\\[F(x)= \\int \\limits \_{-\\infty }^{x} f(\\xi ) \\, d\\xi\\\] | (3.27) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[F(x)= \\int \\limits \_{-\\infty }^{x} f(\\xi ) \\, d\\xi\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.27)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 and that the CDF is related to probability by,
 
-| \\\[F(x) \\equiv P{X \\leq x}\\\] | (3.28) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[F(x) \\equiv P{X \\leq x}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.28)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 That is, the probability of the random variable \\(X \\leq x\\) is the CDF evaluated at \\(x\\). As shown in Figure [3.6]({{< baseurl >}}/resources/normcdf), \\(F(x)\\) ranges from 0 to 1.
 
@@ -49,23 +71,78 @@ Sampling Triangular Distributions
 
 A triangular distribution is defined by the parameters \\(x\_{min}\\), the minimum value of \\(x\\), \\(x\_{mpp}\\), the most-probable value of \\(x\\), and \\(x\_{max}\\), the maximum value of \\(x\\). The cumulative distribution function (CDF) of a triangular distribution is,
 
-| \\\[F(x) = \\frac{x\_{mpp}-x\_{min}}{x\_{max}-x\_{min}}\\left(\\frac{x-x\_{min}}{x\_{mpp}-x\_{min}}\\right)^2\\\] | (3.29) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[F(x) = \\frac{x\_{mpp}-x\_{min}}{x\_{max}-x\_{min}}\\left(\\frac{x-x\_{min}}{x\_{mpp}-x\_{min}}\\right)^2\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.29)
+{{< tdclose >}}
 
-for \\(x\_{min} < x < x\_{mpp}\\), and
+{{< trclose >}}
 
-| \\\[F(x)=1-\\frac{x\_{max}-x\_{mpp}}{x\_{max}-x\_{min}}\\left(\\frac{x\_{max}-x}{x\_{max}-x\_{mpp}}\\right)^2\\\] | (3.30) 
+{{< tableclose >}}
 
-for \\(x\_{mpp} < x < x\_{max}\\). Given a percentile drawn from a uniform random distribution, \\(u=F(x\_ u)\\), the value \\(x\_ u\\) can be found by inverting the previous relationships for \\(F(x)\\). Specifically, note that,
+for \\(x\_{min} \< x \< x\_{mpp}\\), and
 
-| \\\[F(x\_{mpp}) = \\frac{x\_{mpp}-x\_{min}}{x\_{max}-x\_{min}}.\\\] | (3.31) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[F(x)=1-\\frac{x\_{max}-x\_{mpp}}{x\_{max}-x\_{min}}\\left(\\frac{x\_{max}-x}{x\_{max}-x\_{mpp}}\\right)^2\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.30)
+{{< tdclose >}}
 
-Thus, if \\(u < F(x\_{mpp})\\) then \\(x\_{min} < x < x\_{mpp}\\), we invert Equation 21.1 to find,
+{{< trclose >}}
 
-| \\\[x\_ u = x\_{min} + \\sqrt {u(x\_{max}-x\_{min})(x\_{mpp}-x\_{min})}\\\] | (3.32) 
+{{< tableclose >}}
 
-Otherwise, if \\(u > F(x\_{mpp})\\) then \\(x\_{mpp} < x < x\_{max}\\), we invert Equation 21.2 to find,
+for \\(x\_{mpp} \< x \< x\_{max}\\). Given a percentile drawn from a uniform random distribution, \\(u=F(x\_ u)\\), the value \\(x\_ u\\) can be found by inverting the previous relationships for \\(F(x)\\). Specifically, note that,
 
-| \\\[x\_ u = x\_{max}-\\sqrt {(1-u)(x\_{max}-x\_{min})(x\_{max}-x\_{mpp})}\\\] | (3.33) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[F(x\_{mpp}) = \\frac{x\_{mpp}-x\_{min}}{x\_{max}-x\_{min}}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.31)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
+
+Thus, if \\(u \< F(x\_{mpp})\\) then \\(x\_{min} \< x \< x\_{mpp}\\), we invert Equation 21.1 to find,
+
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[x\_ u = x\_{min} + \\sqrt {u(x\_{max}-x\_{min})(x\_{mpp}-x\_{min})}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.32)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
+
+Otherwise, if \\(u > F(x\_{mpp})\\) then \\(x\_{mpp} \< x \< x\_{max}\\), we invert Equation 21.2 to find,
+
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[x\_ u = x\_{max}-\\sqrt {(1-u)(x\_{max}-x\_{min})(x\_{max}-x\_{mpp})}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.33)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 {{< quiz_multiple_choice questionId="Q1_div" >}}{{< quiz_choices >}}{{< quiz_choice isCorrect="false" >}}&nbsp; \\(\\sqrt {\\frac{3}{8}}\\) &nbsp;{{< /quiz_choice >}}
 {{< quiz_choice isCorrect="false" >}}&nbsp; \\(\\frac{1}{4}\\) &nbsp;{{< /quiz_choice >}}

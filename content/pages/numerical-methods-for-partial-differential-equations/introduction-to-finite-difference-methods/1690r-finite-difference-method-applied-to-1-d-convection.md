@@ -6,7 +6,7 @@ title: 2.3 Introduction to Finite Difference Methods
 uid: 431a74fb-7dca-19ce-0c6f-e4b6a0a6446d
 ---
 
-*   [<Finite Difference Methods]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-difference-methods/1690r-finite-difference-methods)
+*   [\<Finite Difference Methods]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-difference-methods/1690r-finite-difference-methods)
 *   [2.3.1Finite Difference Approximations]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-difference-methods)
 *   [2.3.2Finite Difference Methods]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-difference-methods/1690r-finite-difference-methods)
 *   [2.3.3Finite Difference Method Applied to 1-D Convection]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-difference-methods/1690r-finite-difference-method-applied-to-1-d-convection)
@@ -20,17 +20,50 @@ uid: 431a74fb-7dca-19ce-0c6f-e4b6a0a6446d
 
 In this example, we solve 1-D convection,
 
-| \\\[\\frac{\\partial U}{\\partial t} + u\\frac{\\partial U}{\\partial x} = 0,\\\] | (2.58) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\frac{\\partial U}{\\partial t} + u\\frac{\\partial U}{\\partial x} = 0,\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.58)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 using a central difference spatial approximation with a forward Euler time integration,
 
-| \\\[\\frac{U\_ i^{n+1}-U\_ i^ n}{{\\Delta t}} + u\_{i}^ n\\delta \_{2x} U^ n\_{i} = 0.\\\] | (2.59) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\frac{U\_ i^{n+1}-U\_ i^ n}{{\\Delta t}} + u\_{i}^ n\\delta \_{2x} U^ n\_{i} = 0.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.59)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Note: this approximation is the Forward Time-Central Space method from Equation ([2.57](javascript: void(0))) with the diffusion terms removed.
 
 Specifically, we will use a constant velocity \\(u=1\\) and set the initial condition to be a _Gaussian disturbance_:
 
-| \\\[U\_0(x) = 0.75e^{-\\left(\\frac{x-0.5}{0.1}\\right)^2}.\\\] | (2.60) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[U\_0(x) = 0.75e^{-\\left(\\frac{x-0.5}{0.1}\\right)^2}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.60)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 We consider the domain \\(\\Omega =\[0.1\]\\), with periodic boundary conditions. A MATLAB® script that implements this algorithm is:
 
@@ -63,7 +96,7 @@ t = 0;
 U = Uo;
 
 % Loop until t > tfinal
-while (t < tfinal)
+while (t \< tfinal)
     % Forward Euler Step
     U(2:end) = U(2:end) - dt\*u\*centraldiff(U(2:end));
     U(1) = U(end); % enforce periodicity

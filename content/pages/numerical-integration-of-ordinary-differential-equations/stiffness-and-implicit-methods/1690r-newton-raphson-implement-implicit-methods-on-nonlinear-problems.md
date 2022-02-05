@@ -6,7 +6,7 @@ title: 1.7 Stiffness and Implicit Methods
 uid: b363c2d0-1814-cf4c-0cb3-6fe540840d02
 ---
 
-*   [<Implicit Methods for Linear Systems of ODEs]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/stiffness-and-implicit-methods/1690r-implicit-methods-for-linear-systems-of-odes)
+*   [\<Implicit Methods for Linear Systems of ODEs]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/stiffness-and-implicit-methods/1690r-implicit-methods-for-linear-systems-of-odes)
 *   [1.7.1Stiffness]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/stiffness-and-implicit-methods)
 *   [1.7.2Spectral Condition Number]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/stiffness-and-implicit-methods/1690r-spectral-condition-number)
 *   [1.7.3Implicit Methods for Linear Systems of ODEs]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/stiffness-and-implicit-methods/1690r-implicit-methods-for-linear-systems-of-odes)
@@ -21,32 +21,170 @@ uid: b363c2d0-1814-cf4c-0cb3-6fe540840d02
 
 When the ODE's are nonlinear, implicit methods require the solution of a nonlinear system of algebraic equations at each iteration. To see this, consider the use of the trapezoidal method for a nonlinear problem,
 
-| \\\[v^{n+1} = v^ n + \\frac{1}{2}{\\Delta t}\\left\[f(v^{n+1},t^{n+1})+f(v^ n,t^ n)\\right\].\\\] | (1.127) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[v^{n+1} = v^ n + \\frac{1}{2}{\\Delta t}\\left\[f(v^{n+1},t^{n+1})+f(v^ n,t^ n)\\right\].\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.127)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 We can define the following residual vector for the trapezoidal method,
 
-| \\\[R(w) \\equiv w - v^ n -\\frac{1}{2}{\\Delta t}\\left\[f(w,t^{n+1})+f(v^ n,t^ n)\\right\].\\\] | (1.128) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[R(w) \\equiv w - v^ n -\\frac{1}{2}{\\Delta t}\\left\[f(w,t^{n+1})+f(v^ n,t^ n)\\right\].\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.128)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Thus, \\(v^{n+1}\\) for the trapezoidal method is given by the solution of,
 
-| \\\[R(v^{n+1}) = 0,\\\] | (1.129) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[R(v^{n+1}) = 0,\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.129)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 which is a nonlinear algebraic system of equations for \\(v^{n+1}\\).
 
 One of the standard methods for solving a nonlinear system of algebraic equations is the Newton-Raphson method. It begins with an initial guess for \\(v^{n+1}\\) and solves a linearized version of \\(R=0\\) to find a correction to the initial guess for \\(v^{n+1}\\). So, define the current guess for \\(v^{n+1}\\) as \\(w^ m\\) where \\(m\\) indicates the sub-iteration in the Newton-Raphson method. Note, common useage is to call the iterations in the Newton-Raphson solution for \\(v^{n+1}\\) sub-iterations since these are iterations which occur within every time iteration from \\(n\\) to \\(n+1\\). To find the correction, \\(\\Delta w\\), where
 
-| \\\[w^{m+1} = w^ m + \\Delta w,\\\] | (1.130) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[w^{m+1} = w^ m + \\Delta w,\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.130)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 we linearize and solve the nonlinear residual equation,
 
-| &nbsp; | \\(\\displaystyle R(w^{m+1})\\) | \\(\\displaystyle =\\) | \\(\\displaystyle 0, \\nonumber\\) | &nbsp; | (1.131) |
-| &nbsp; | \\(\\displaystyle R(w^ m + \\Delta w)\\) | \\(\\displaystyle =\\) | \\(\\displaystyle 0, \\nonumber\\) | &nbsp; | (1.132) |
-| &nbsp; | \\(\\displaystyle R(w^ m) + \\left.\\frac{\\partial R}{\\partial w}\\right&#124;\_{w^ m} \\Delta w\\) | \\(\\displaystyle =\\) | \\(\\displaystyle 0, \\nonumber\\) | &nbsp; | (1.133) |
-| &nbsp; | \\(\\displaystyle \\left.\\frac{\\partial R}{\\partial w}\\right&#124;\_{w^ m} \\Delta w\\) | \\(\\displaystyle =\\) | \\(\\displaystyle -R(w^ m). \\label{equ:NRsystem}\\) | &nbsp; | (1.134) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle R(w^{m+1})\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 0, \\nonumber\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.131)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle R(w^ m + \\Delta w)\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 0, \\nonumber\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.132)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle R(w^ m) + \\left.\\frac{\\partial R}{\\partial w}\\right|\_{w^ m} \\Delta w\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle 0, \\nonumber\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.133)
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\left.\\frac{\\partial R}{\\partial w}\\right|\_{w^ m} \\Delta w\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle =\\)
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle -R(w^ m). \\label{equ:NRsystem}\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(1.134)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 This last line is a linear system of equations for the correction since \\({\\partial R}/{\\partial w}\\) is a \\(d \\times d\\) matrix when the original ODE's are a system of \\(d\\) equations. For example, for the trapezoidal method,
 
-| \\\[\\left.\\frac{\\partial R}{\\partial w}\\right&#124;\_{w^ m} = I - \\frac{1}{2}{\\Delta t}\\left.\\frac{\\partial f}{\\partial w}\\right&#124;\_{w^ m}.\\\] | (1.135) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\left.\\frac{\\partial R}{\\partial w}\\right|\_{w^ m} = I - \\frac{1}{2}{\\Delta t}\\left.\\frac{\\partial f}{\\partial w}\\right|\_{w^ m}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.135)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Usually, the initial guess for \\(v^{n+1}\\) is the previous iteration, i.e. \\(w^0 = v^ n\\). So, the entire iteration from \\(n\\) to \\(n+1\\) has the following form,
 

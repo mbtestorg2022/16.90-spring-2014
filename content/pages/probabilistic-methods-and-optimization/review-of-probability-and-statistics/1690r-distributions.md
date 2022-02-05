@@ -6,7 +6,7 @@ title: 3.2 Review of Probability and Statistics
 uid: 0c7b4a5a-66d4-c9d6-0849-150ad651b9c6
 ---
 
-*   [<Outcomes and Events]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-outcomes-and-events)
+*   [\<Outcomes and Events]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-outcomes-and-events)
 *   [3.2.1Random Variables]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics)
 *   [3.2.2Outcomes and Events]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-outcomes-and-events)
 *   [3.2.3Distributions]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-distributions)
@@ -28,13 +28,35 @@ Probability Mass Functions
 
 Consider a discrete random variable \\(X\\), and the event \\(A\\) that \\(X\\) is equal to a specific value \\(x\\). The probability of \\(A\\) can be written as,
 
-| \\\[P\\{ A\\} =P\\{ X=x\\} =p\_ X(x)\\\] | (3.3) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[P\\{ A\\} =P\\{ X=x\\} =p\_ X(x)\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.3)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(p\_ X(x)\\) is called the probability mass function of \\(X\\). Note that since \\(p\_ X(x)\\) is a probability value, it is always less than one, and it is zero at all those points which the random variable \\(X\\) will never be equal to.
 
 **Example 3:** Consider the rotor blades in example 1 of unit 1. Suppose the total number of rotor blades was 4. The random variable \\(N\_ R\\) is a discrete random variable, which can take 5 different values. A possible probability mass funtion for \\(N\_ R\\) is as follows,
 
-| \\\[p\_{N\_ R}(x) = \\left\\{ \\begin{array}{ll} 0.6 & \\mbox{for } x = 0, \\\\\[0.1in\] 0.2 & \\mbox{for } x = 1, \\\\\[0.1in\] 0.1 & \\mbox{for } x = 2, \\\\\[0.1in\] 0.05 & \\mbox{for } x = 3, \\\\\[0.1in\] 0.05 & \\mbox{for } x = 4, \\\\\[0.1in\] 0 & \\mbox{for } x \\neq \\{ 0,1,2,3,4\\} \\end{array}\\right.\\\] | (3.4) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[p\_{N\_ R}(x) = \\left\\{ \\begin{array}{ll} 0.6 & \\mbox{for } x = 0, \\\\\[0.1in\] 0.2 & \\mbox{for } x = 1, \\\\\[0.1in\] 0.1 & \\mbox{for } x = 2, \\\\\[0.1in\] 0.05 & \\mbox{for } x = 3, \\\\\[0.1in\] 0.05 & \\mbox{for } x = 4, \\\\\[0.1in\] 0 & \\mbox{for } x \\neq \\{ 0,1,2,3,4\\} \\end{array}\\right.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.4)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Note that since the \\(p\_{N\_ R}(x)\\) are probability values, they sum to 1 over their domain \\(x\\).
 
@@ -43,13 +65,35 @@ Probability Density Functions
 
 A probability density function (PDF) is used to describe the probability of a continuous random variable being in some range. In particular, consider a random variable \\(X\\), and the event \\(A\\) that it lies between the numbers \\(a\\) and \\(b\\), i.e., \\(a \\leq X \\leq b\\). The probability of the event \\(A\\) can be written as,
 
-| \\\[P\\{ A\\} = P\\{ a \\leq X \\leq b\\} = \\int \\limits \_{a}^{b} f\_ X(x) dx,\\\] | (3.5) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[P\\{ A\\} = P\\{ a \\leq X \\leq b\\} = \\int \\limits \_{a}^{b} f\_ X(x) dx,\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.5)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(f\_ X(x)\\) is called the probability density of \\(X\\). Note that unlike the probability mass function, the probability density function \\(f\_ X(x)\\), by itself, does not give the probability of an event occuring. Indeed, \\(f\_ X(x)\\) can be more than one for a given value of \\(x\\), however it can never be less than zero for any \\(x\\).
 
 A common (and probably the simplest) distribution is the uniform distribution. In this case, the probability density is constant within some range and zero outside of this range,
 
-| \\\[f\_ X(x) = \\left\\{ \\begin{array}{ll} \\frac{1}{b-a} & \\mbox{for } a \\leq x \\leq b, \\\\\[0.1in\] 0, & \\mbox{otherwise}. \\end{array}\\right.\\\] | (3.6) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[f\_ X(x) = \\left\\{ \\begin{array}{ll} \\frac{1}{b-a} & \\mbox{for } a \\leq x \\leq b, \\\\\[0.1in\] 0, & \\mbox{otherwise}. \\end{array}\\right.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.6)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 We would say that the random variable \\(X\\) is uniformly distributed, and denote it as \\(X \\sim U(a,b)\\). Other distribution types are described later in the unit.
 
@@ -58,26 +102,81 @@ Cumulative Density Functions
 
 The cumulative distribution function (CDF) of a random variable \\(X\\) is defined as the probability of the event that \\(X \\leq x\\). Specifically,
 
-| \\\[F(x) \\equiv P\\{ X \\leq x\\}\\\] | (3.7) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[F(x) \\equiv P\\{ X \\leq x\\}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.7)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 The CDF and PDF of \\(X\\) are related as follows,
 
-| \\\[F(a) = \\int ^{a}\_{-\\infty } f\_ X(x)\\, dx\\\] | (3.8) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[F(a) = \\int ^{a}\_{-\\infty } f\_ X(x)\\, dx\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.8)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Thus, we can show,
 
-| \\\[F(b) - F(a) = \\int ^{b}\_{a} f\_ X(x)\\, dx.\\\] | (3.9) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[F(b) - F(a) = \\int ^{b}\_{a} f\_ X(x)\\, dx.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.9)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Furthermore, this implies that
 
-| \\\[f\_ X = \\frac{dF}{dx}\\\] | (3.10) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[f\_ X = \\frac{dF}{dx}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.10)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Some Common Types of Distributions
 ----------------------------------
 
 The normal (or Gaussian) distribution is,
 
-| \\\[f\_ X(x) = \\frac{1}{\\sigma \_ x\\sqrt {2\\pi }}e^{-(x-\\mu \_ x)^2/2\\sigma \_ x^2}\\\] | (3.11) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[f\_ X(x) = \\frac{1}{\\sigma \_ x\\sqrt {2\\pi }}e^{-(x-\\mu \_ x)^2/2\\sigma \_ x^2}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.11)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 We will use the common notation \\(X \\sim \\mathcal{N}(\\mu ,\\sigma ^2)\\) to indicate that \\(X\\) is a normally-distributed random variable with mean \\(\\mu\\) and variance \\(\\sigma ^2\\).
 
@@ -97,7 +196,18 @@ We will use the common notation \\(X \\sim \\mathcal{N}(\\mu ,\\sigma ^2)\\) to 
 
 For a continuous random variable, the probability of the random variable taking any single value is 0, only events where the random variable lies in an interval have non-zero probability. Another way to see this is that
 
-| \\\[P\\{ \\frac{a+b}{2} \\leq X \\leq \\frac{a+b}{2}\\} = \\int \_{\\frac{a+b}{2}}^{\\frac{a+b}{2}} f\_ X(x) \\, dx = 0\\\] | (3.12) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[P\\{ \\frac{a+b}{2} \\leq X \\leq \\frac{a+b}{2}\\} = \\int \_{\\frac{a+b}{2}}^{\\frac{a+b}{2}} f\_ X(x) \\, dx = 0\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.12)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 by the definition of a definite integral.{{< /quiz_solution >}}{{< /quiz_multiple_choice >}}
 

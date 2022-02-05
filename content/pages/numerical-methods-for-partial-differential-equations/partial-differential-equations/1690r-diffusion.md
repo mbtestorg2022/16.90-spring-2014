@@ -6,7 +6,7 @@ title: 2.2 Partial Differential Equations
 uid: 91200789-ca43-fa38-473a-bc690667c305
 ---
 
-*   [<Characteristics for One-Dimensional Burgers Equation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations/1690r-characteristics-for-one-dimensional-burgers-equation)
+*   [\<Characteristics for One-Dimensional Burgers Equation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations/1690r-characteristics-for-one-dimensional-burgers-equation)
 *   [2.2.1Conservation Laws in Integral and Differential Form]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations)
 *   [2.2.2One-Dimensional Burgers Equation]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations/1690r-one-dimensional-burgers-equation)
 *   [2.2.3Convection]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/partial-differential-equations/1690r-convection)
@@ -27,11 +27,39 @@ In many engineering applications the dominant physical transport phenomenon is m
 
 Heat conduction is another example of diffusion, the diffusion of thermal energy. This section presents the conservation law for diffusion in differential form and discuss the behavior of problems modeled with diffusion. Diffusion is characterized by a flux,\\(\\vec{F}\\) , of the form:
 
-| &nbsp; | \\(\\displaystyle \\vec{F} = -\\mu \\nabla U,\\) | &nbsp; | (2.32) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+\\(\\displaystyle \\vec{F} = -\\mu \\nabla U,\\)
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+(2.32)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 where \\(\\mu\\) is the diffusion coefficient and \\(U\\) is the state. The differential form of the conservation law for the diffusion is,
 
-| \\\[\\dfrac {\\partial U}{\\partial t} - \\nabla \\cdot (\\mu \\nabla U) = S \\label{equ:diffconserv}\\\] | (2.33) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\dfrac {\\partial U}{\\partial t} - \\nabla \\cdot (\\mu \\nabla U) = S \\label{equ:diffconserv}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.33)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Equation [2.33](javascript: void(0)) is a second-order partial differential equation often called the diffusion equation or heat equation. Partial differential equations of this form arise in many applications including molecular diffusion and heat conduction.
 
@@ -40,11 +68,33 @@ One-dimensional Diffusion
 
 We now illustrate the behavior of the diffusion equation considering a simple one-dimensional model problem. Consider the one-dimensional diffusion equation with constant \\(\\mu\\). The diffusion equation simplifies to
 
-| \\\[\\dfrac {\\partial U}{\\partial t} - \\mu \\dfrac {\\partial ^2 U}{\\partial x^2} = 0 \\label{equ:oneddiff}\\\] | (2.34) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\dfrac {\\partial U}{\\partial t} - \\mu \\dfrac {\\partial ^2 U}{\\partial x^2} = 0 \\label{equ:oneddiff}\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.34)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Figure [2.3]({{< baseurl >}}/resources/oneddiff) shows the initial condition
 
-| \\\[U\_0(x) = 0.75 e^{-(\\frac{x-0.5}{0.1})^2},\\\] | (2.35) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[U\_0(x) = 0.75 e^{-(\\frac{x-0.5}{0.1})^2},\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(2.35)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 as well as the solution after a short time \\(t=0.05\\). The behavior of the diffusion equation is markedly different from what we have seen for the convection equation. The effect of the diffusion equation is to "smooth" out the conserved state in regions of steep gradients.
 

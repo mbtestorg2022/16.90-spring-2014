@@ -6,7 +6,7 @@ title: 1.4 Convergence
 uid: c1ab4737-a98d-26fb-dcee-7c83dfab47d4
 ---
 
-*   [<Convergence]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/convergence)
+*   [\<Convergence]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/convergence)
 *   [1.4.1Types of Errors]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/convergence)
 *   [1.4.2Convergence of Numerical Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/convergence/1690r-convergence-of-numerical-methods)
 *   [1.4.3Rate of Convergence Global Order of Accuracy]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/convergence/1690r-rate-of-convergence--global-order-of-accuracy-)
@@ -24,11 +24,33 @@ Definition of Convergence
 
 A finite difference method for solving,
 
-| \\\[u\_ t = f(u,t) \\qquad \\mbox{with} \\qquad u(0) = u\_0\\\] | (1.63) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[u\_ t = f(u,t) \\qquad \\mbox{with} \\qquad u(0) = u\_0\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.63)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 from \\(t=0\\) to \\(T\\) is convergent if
 
-| \\\[\\max \_{n=\[0,T/{\\Delta t}\]} &#124;v^ n - u(n{\\Delta t})&#124; \\rightarrow 0 \\qquad \\mbox{as} \\qquad {\\Delta t}\\rightarrow 0.\\\] | (1.64) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\max \_{n=\[0,T/{\\Delta t}\]} |v^ n - u(n{\\Delta t})| \\rightarrow 0 \\qquad \\mbox{as} \\qquad {\\Delta t}\\rightarrow 0.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.64)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 This is a mathematically precise definition; let's take a moment to investigate it a little more deeply. The first part of the statement is familiar by now; we are solving a first-order ODE of the form \\(u\_ t=f(u,t)\\) with given initial conditions. We assume that a method is defined to produce our numerical solution \\(v^ n\\) for \\(n=1,2,\\ldots ,T / {\\Delta t}\\) (we assign \\(v^0=u^0\\)); e.g., the forward Euler method.
 

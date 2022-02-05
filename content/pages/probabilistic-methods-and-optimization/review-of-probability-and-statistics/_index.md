@@ -6,7 +6,7 @@ title: 3.2 Review of Probability and Statistics
 uid: 972a23bc-2208-f9b1-2895-30de24175e7d
 ---
 
-*   [<Pre-requisite Material]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/overview4/1690r-pre-requisite-material4)
+*   [\<Pre-requisite Material]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/overview4/1690r-pre-requisite-material4)
 *   [3.2.1Random Variables]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics)
 *   [3.2.2Outcomes and Events]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-outcomes-and-events)
 *   [3.2.3Distributions]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/review-of-probability-and-statistics/1690r-distributions)
@@ -35,11 +35,33 @@ Functions of Random Variables
 
 We further recognize that not only can we have random variables, we can also have processes that depend on the random variables, in addition to depending on deterministic variables. For example, the thickness of the turbine blades affects the heat transfer across the blade and the flow pattern in the engine, and this affects the thrust the engine produces. We see that the thrust produced by the engine is also a random variable, which depends on the thickness(es) of the turbine blades. Therefore, if we denote the thrust produced by the engine as a random variable \\(Y\\), then we have,
 
-| \\\[Y = Y(X)\\\] | (3.1) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[Y = Y(X)\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.1)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 **Example 2:** The airline is concerned about the cost of the inspection and repair of its engines. The cost to replace a single blade is \\(c\_ B\\). Also, if the number of replacements is greater than 5, the cost rises dramatically, since regulations dictate that a more thorough inspection must be performed. We will model this as an extra cost \\(c\_ D\\). Clearly the total cost of an inspection and repair is a random variable. We wil denote this random variable as \\(C(N\_ R;c\_ B,c\_ D)\\), recognizing its dependence on the random variable \\(N\_ R\\), and its dependence on the deterministic variables \\(c\_ B\\) and \\(c\_ D\\). We can also easily determine an expression for the total cost,
 
-| \\\[C(N\_ R;c\_ B,c\_ D) = \\left\\{ \\begin{array}{ll} c\_ B N\_ R, & \\mbox{for } 0 \\leq N\_ R \\leq 5, \\\\\[0.1in\] c\_ B N\_ R + c\_ D, & \\mbox{for } 6 \\leq N\_ R \\leq N \\end{array}\\right.\\\] | (3.2) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[C(N\_ R;c\_ B,c\_ D) = \\left\\{ \\begin{array}{ll} c\_ B N\_ R, & \\mbox{for } 0 \\leq N\_ R \\leq 5, \\\\\[0.1in\] c\_ B N\_ R + c\_ D, & \\mbox{for } 6 \\leq N\_ R \\leq N \\end{array}\\right.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.2)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 {{< quiz_multiple_choice questionId="Q1_div" >}}{{< quiz_choices >}}{{< quiz_choice isCorrect="false" >}} \\(\\{ 1, 2, 3, \\ldots , N \\}\\){{< /quiz_choice >}}
 {{< quiz_choice isCorrect="false" >}} \\(\\{ N\\}\\){{< /quiz_choice >}}

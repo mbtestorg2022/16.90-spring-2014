@@ -6,7 +6,7 @@ title: 3.5 Variance Reduction Techniques for the Monte Carlo Method
 uid: e719ff51-42ac-62fb-c38b-4410308e2feb
 ---
 
-*   [<Bootstrapping]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/error-estimates-for-the-monte-carlo-method/1690r-bootstrapping)
+*   [\<Bootstrapping]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/error-estimates-for-the-monte-carlo-method/1690r-bootstrapping)
 *   [3.5.1Monte Carlo Error as a Random Variable]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/variance-reduction-techniques-for-the-monte-carlo-method)
 *   [3.5.2Importance Sampling]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/variance-reduction-techniques-for-the-monte-carlo-method/1690r-importance-sampling)
 *   [\>Importance Sampling]({{< baseurl >}}/pages/probabilistic-methods-and-optimization/variance-reduction-techniques-for-the-monte-carlo-method/1690r-importance-sampling)
@@ -28,15 +28,48 @@ In the last subsection, we analyzed the error made while using the Monte Carlo m
 
 Specifically, we recognized that the error \\(e\\) made in estimating the expected value of a random variable \\(X\\) with a distribution \\(f\_ X\\),
 
-| \\\[\\mu \_ X = \\int \\limits \_{-\\infty }^{\\infty } x \\, f\_ X(x) \\, dx\\\] | (3.58) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\mu \_ X = \\int \\limits \_{-\\infty }^{\\infty } x \\, f\_ X(x) \\, dx\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.58)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 using the canonical estimator,
 
-| \\\[\\bar{y} = \\frac{1}{N} \\sum \\limits \_{i=1}^{N} y\_ i\\\] | (3.59) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[\\bar{y} = \\frac{1}{N} \\sum \\limits \_{i=1}^{N} y\_ i\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.59)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 is a normally distributed random variable,
 
-| \\\[e \\to \\mathcal{N}\\left(0,\\frac{\\sigma ^2}{N}\\right)\\\] | (3.60) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[e \\to \\mathcal{N}\\left(0,\\frac{\\sigma ^2}{N}\\right)\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(3.60)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Improving the Monte Carlo Method
 --------------------------------

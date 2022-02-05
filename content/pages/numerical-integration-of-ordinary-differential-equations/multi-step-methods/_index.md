@@ -6,7 +6,7 @@ title: 1.8 Multi-Step Methods
 uid: 67717326-dffb-7444-5162-101fd9a9ec91
 ---
 
-*   [<Apply Newton-Rhapson]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/stiffness-and-implicit-methods/1690r-apply-newton-rhapson)
+*   [\<Apply Newton-Rhapson]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/stiffness-and-implicit-methods/1690r-apply-newton-rhapson)
 *   [1.8.1Adams-Bashforth Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/multi-step-methods)
 *   [1.8.2Adams-Moulton Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/multi-step-methods/1690r-adams-moulton-methods)
 *   [1.8.3Backwards Differentiation Methods]({{< baseurl >}}/pages/numerical-integration-of-ordinary-differential-equations/multi-step-methods/1690r-backwards-differentiation-methods)
@@ -20,15 +20,190 @@ uid: 67717326-dffb-7444-5162-101fd9a9ec91
 
 Adams-Bashforth methods are explicit methods of the form,
 
-| \\\[v^{n+1} - v^{n} = {\\Delta t}\\sum \_{i=1}^ s \\beta \_ i f^{n+1-i}.\\\] | (1.136) 
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+\\\[v^{n+1} - v^{n} = {\\Delta t}\\sum \_{i=1}^ s \\beta \_ i f^{n+1-i}.\\\]
+{{< tdclose >}}
+{{< tdopen >}}
+(1.136)
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 Thus, the basic time derivative approximation remains the same for all \\(p\\) (i.e. \\(du/dt\\) is approximated by \\((v^{n+1} - v^ n)/Dt\\)) and the higher-order accuracy is achieved by using more values of \\(f\\).
 
-|  {{< br >}}{{< br >}} \\(p\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\beta \_1\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\beta \_2\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\beta \_3\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\beta \_4\\) {{< br >}}{{< br >}}  |
-|  {{< br >}}{{< br >}} 1 {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} 1 {{< br >}}{{< br >}}  | &nbsp; |
-|  {{< br >}}{{< br >}} 2 {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{3}{2}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(-\\frac{1}{2}\\) {{< br >}}{{< br >}}  | &nbsp; |
-|  {{< br >}}{{< br >}} 3 {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{23}{12}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(-\\frac{16}{12}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{5}{12}\\) {{< br >}}{{< br >}}  | &nbsp; |
-|  {{< br >}}{{< br >}} 4 {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{55}{24}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(-\\frac{59}{24}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(\\frac{37}{24}\\) {{< br >}}{{< br >}}  |  {{< br >}}{{< br >}} \\(-\\frac{9}{24}\\) {{< br >}}{{< br >}}  
+{{< tableopen >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+\\(p\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\beta \_1\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\beta \_2\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\beta \_3\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\beta \_4\\)
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+1
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+1
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+2
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{3}{2}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(-\\frac{1}{2}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+3
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{23}{12}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(-\\frac{16}{12}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{5}{12}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+ 
+{{< tdclose >}}
+
+{{< trclose >}}
+{{< tropen >}}
+{{< tdopen >}}
+
+
+4
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{55}{24}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(-\\frac{59}{24}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(\\frac{37}{24}\\)
+
+
+{{< tdclose >}}
+{{< tdopen >}}
+
+
+\\(-\\frac{9}{24}\\)
+
+
+{{< tdclose >}}
+
+{{< trclose >}}
+
+{{< tableclose >}}
 
 **Table 2**: Coefficients for Adams-Bashforth methods (these methods are explicit so \\(\\beta \_0 = 0\\)). Note: the \\(p=1\\) method is the forward Euler method.
 

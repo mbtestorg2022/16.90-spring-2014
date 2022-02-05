@@ -6,7 +6,7 @@ title: 2.5 Introduction to Finite Volume Methods
 uid: 767b5c96-4bd2-394b-92da-ca9fa25f2e1e
 ---
 
-*   [<Introduction to Finite Volume Methods]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-volume-methods)
+*   [\<Introduction to Finite Volume Methods]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-volume-methods)
 *   [2.5.1Finite Volume Method in 1-D]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-volume-methods)
 *   [2.5.2Finite Volume Method Applied to 1-D Convection]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-volume-methods/1690r-finite-volume-method-applied-to-1-d-convection)
 *   [2.5.3Finite Volume Method in 2-D]({{< baseurl >}}/pages/numerical-methods-for-partial-differential-equations/introduction-to-finite-volume-methods/1690r-finite-volume-method-in-2-d)
@@ -57,7 +57,7 @@ U = exp(-xmid.^2);
 t = 0;
 
 % Loop until t > tfinal
-while (t < tfinal),
+while (t \< tfinal),
 
   Ubc = \[U(Nx), U, U(1)\]; % This enforces the periodic bc
 
