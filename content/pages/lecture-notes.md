@@ -39,7 +39,7 @@ Course Introduction and Ordinary Differential Equations (ODEs) (notes not availa
 2
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Numerical Integration of ODEs: Approximating Time Derivative (PDF - 1.8MB)]({{< baseurl >}}/resources/mit16_90s14_lecture2)
+[Numerical Integration of ODEs: Approximating Time Derivative (PDF - 1.8MB)]({{< baseurl >}}/resources/mit16_90s14_lecture2)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -48,7 +48,7 @@ Course Introduction and Ordinary Differential Equations (ODEs) (notes not availa
 3
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Numerical Integration of ODEs: Accuracy and a Pendulum Problem (PDF - 1.4MB)]({{< baseurl >}}/resources/mit16_90s14_lecture3)
+[Numerical Integration of ODEs: Accuracy and a Pendulum Problem (PDF - 1.4MB)]({{< baseurl >}}/resources/mit16_90s14_lecture3)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -57,7 +57,7 @@ Course Introduction and Ordinary Differential Equations (ODEs) (notes not availa
 4
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Numerical Integration of ODEs: Stability and a Ballistics Problem (PDF)]({{< baseurl >}}/resources/mit16_90s14_lecture4)
+[Numerical Integration of ODEs: Stability and a Ballistics Problem (PDF)]({{< baseurl >}}/resources/mit16_90s14_lecture4)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -66,7 +66,7 @@ Course Introduction and Ordinary Differential Equations (ODEs) (notes not availa
 5
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Numerical Integration of ODEs: Nonlinear Systems (PDF)]({{< baseurl >}}/resources/mit16_90s14_lecture5)
+[Numerical Integration of ODEs: Nonlinear Systems (PDF)]({{< baseurl >}}/resources/mit16_90s14_lecture5)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -75,7 +75,7 @@ Course Introduction and Ordinary Differential Equations (ODEs) (notes not availa
 6
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Numerical Integration of ODEs: Stiffness, Implicit Methods, Runge-Kutta (PDF - 1.3MB)]({{< baseurl >}}/resources/mit16_90s14_lecture6)
+[Numerical Integration of ODEs: Stiffness, Implicit Methods, Runge-Kutta (PDF - 1.3MB)]({{< baseurl >}}/resources/mit16_90s14_lecture6)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -90,7 +90,7 @@ Course Introduction and Ordinary Differential Equations (ODEs) (notes not availa
 7
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Numerical Methods of Partial Differential Equations: Introduction (PDF - 1.1MB)]({{< baseurl >}}/resources/mit16_90s14_lecture7)
+[Numerical Methods of Partial Differential Equations: Introduction (PDF - 1.1MB)]({{< baseurl >}}/resources/mit16_90s14_lecture7)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -99,7 +99,7 @@ Course Introduction and Ordinary Differential Equations (ODEs) (notes not availa
 8
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Numerical Methods of PDEs: Finite Difference Methods 1 (PDF - 1.3MB)]({{< baseurl >}}/resources/mit16_90s14_lecture8)
+[Numerical Methods of PDEs: Finite Difference Methods 1 (PDF - 1.3MB)]({{< baseurl >}}/resources/mit16_90s14_lecture8)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -108,7 +108,7 @@ Course Introduction and Ordinary Differential Equations (ODEs) (notes not availa
 9
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Numerical Methods of PDEs: Finite Difference Methods 2 (PDF - 1.2MB)]({{< baseurl >}}/resources/mit16_90s14_lecture9)
+[Numerical Methods of PDEs: Finite Difference Methods 2 (PDF - 1.2MB)]({{< baseurl >}}/resources/mit16_90s14_lecture9)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -117,7 +117,7 @@ Course Introduction and Ordinary Differential Equations (ODEs) (notes not availa
 10
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Numerical Methods of PDEs: Finite Volume Methods 1 (PDF - 1.5MB)]({{< baseurl >}}/resources/mit16_90s14_lecture10)
+[Numerical Methods of PDEs: Finite Volume Methods 1 (PDF - 1.5MB)]({{< baseurl >}}/resources/mit16_90s14_lecture10)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -126,7 +126,7 @@ Course Introduction and Ordinary Differential Equations (ODEs) (notes not availa
 11
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Numerical Methods of PDEs: Finite Volume Methods 2 (PDF)]({{< baseurl >}}/resources/mit16_90s14_lecture11)
+[Numerical Methods of PDEs: Finite Volume Methods 2 (PDF)]({{< baseurl >}}/resources/mit16_90s14_lecture11)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -135,7 +135,7 @@ Course Introduction and Ordinary Differential Equations (ODEs) (notes not availa
 12
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Numerical Methods of PDEs: Finite Volume in 2D and Midterm Review (PDF - 1.8MB)]({{< baseurl >}}/resources/mit16_90s14_lecture12)
+[Numerical Methods of PDEs: Finite Volume in 2D and Midterm Review (PDF - 1.8MB)]({{< baseurl >}}/resources/mit16_90s14_lecture12)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -162,7 +162,7 @@ Numerical Methods of PDEs: Matrix Stability Analysis (notes not available)
 14
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Fourier Stability Analysis (PDF - 1.3MB)]({{< baseurl >}}/resources/mit16_90s14_lecture14)
+[Fourier Stability Analysis (PDF - 1.3MB)]({{< baseurl >}}/resources/mit16_90s14_lecture14)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -171,7 +171,7 @@ Numerical Methods of PDEs: Matrix Stability Analysis (notes not available)
 15
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Numerical Methods of PDEs: Collocation and Weighted Residuals (PDF - 1.1MB)]({{< baseurl >}}/resources/mit16_90s14_lecture15)
+[Numerical Methods of PDEs: Collocation and Weighted Residuals (PDF - 1.1MB)]({{< baseurl >}}/resources/mit16_90s14_lecture15)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -180,7 +180,7 @@ Numerical Methods of PDEs: Matrix Stability Analysis (notes not available)
 16-18
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Numerical Methods of PDEs: Finite Element Method (PDF - 1.3MB)]({{< baseurl >}}/resources/mit16_90s14_lecture16-18)
+[Numerical Methods of PDEs: Finite Element Method (PDF - 1.3MB)]({{< baseurl >}}/resources/mit16_90s14_lecture16-18)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -195,7 +195,7 @@ Numerical Methods of PDEs: Matrix Stability Analysis (notes not available)
 19
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Monte Carlo (PDF - 1.3MB)]({{< baseurl >}}/resources/mit16_90s14_lecture19)
+[Monte Carlo (PDF - 1.3MB)]({{< baseurl >}}/resources/mit16_90s14_lecture19)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -204,7 +204,7 @@ Numerical Methods of PDEs: Matrix Stability Analysis (notes not available)
 20
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Monte Carlo Estimators (PDF - 1.1MB)]({{< baseurl >}}/resources/mit16_90s14_lecture20)
+[Monte Carlo Estimators (PDF - 1.1MB)]({{< baseurl >}}/resources/mit16_90s14_lecture20)
 {{< tdclose >}}
 
 {{< trclose >}}
@@ -213,7 +213,7 @@ Numerical Methods of PDEs: Matrix Stability Analysis (notes not available)
 21
 {{< tdclose >}}
 {{< tdopen >}}
-![This resource may not render correctly in a screen reader.](/images/inacessible.gif)[Probabilistic Methods & Optimization: Statistical Sampling Methods (PDF - 1.5MB)]({{< baseurl >}}/resources/mit16_90s14_lecture21)
+[Probabilistic Methods & Optimization: Statistical Sampling Methods (PDF - 1.5MB)]({{< baseurl >}}/resources/mit16_90s14_lecture21)
 {{< tdclose >}}
 
 {{< trclose >}}
