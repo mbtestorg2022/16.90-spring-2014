@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 02467893-75dd-44cc-fcac-58f1a4ee9702
 resourcetype: Image
 title: FiniteDifference_twod_mesh.png
 uid: 36452925-7fa9-e455-7dca-ae164384e996

@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 2ff49897-a168-59d4-5d17-feb89ff6fae6
 resourcetype: Image
 title: Ltbc_uniform.png
 uid: 6c1cf0fd-d59a-b650-239b-04f487afbfe2

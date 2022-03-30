@@ -4,6 +4,7 @@ description: This is a resource file that contains information regarding lecture
   notes.
 file: https://ol-ocw-studio-app-qa.s3.amazonaws.com/courses/16-90-computational-methods-in-aerospace-engineering-spring-2014/9f1c9a738a3fc8bf5c2bb15df955223a_MIT16_90S14_Lecture6.pdf
 file_type: application/pdf
+parent_uid: 88a44a6b-ab5e-a4b6-5c5c-1379cb3476ce
 resourcetype: Document
 title: 'Lecture 6 Notes: Numerical Integration of ODEs: Stiffness, Implicit Methods,
   Runge-Kutta'

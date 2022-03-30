@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 5b35a359-99c0-aad1-8b33-6126f6b0a143
 resourcetype: Image
 title: onedconvect.png
 uid: 301c64b6-5694-04b6-9aed-376bcad4b476

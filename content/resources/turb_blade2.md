@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: e4ed709d-1333-d460-e932-cde246cff19f
 resourcetype: Image
 title: turb_blade2.png
 uid: 77e998ea-9c47-ce82-94c8-a0ce4566c023

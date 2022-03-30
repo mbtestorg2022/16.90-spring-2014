@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 998bd383-00b6-8dbd-2d38-c251f8262e37
 resourcetype: Image
 title: bd_stab.png
 uid: 3dabc32c-8428-4e1f-722a-bfd3244e215f

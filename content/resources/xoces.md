@@ -8,6 +8,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: ef5333c4-caac-4b23-3599-e89e37e52fea
 resourcetype: Image
 title: Xcoes
 uid: b8d43702-356f-9de2-1b60-9a48bb1a9c7d

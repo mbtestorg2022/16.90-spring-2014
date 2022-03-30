@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 06f65fc2-70a3-d410-b331-d186ad67852a
 resourcetype: Image
 title: E_collocation.png
 uid: 04da6a92-4cd8-492f-8863-77514ebad64a

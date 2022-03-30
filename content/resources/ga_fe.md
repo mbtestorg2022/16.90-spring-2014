@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: bc0d43fe-1169-e2be-34aa-cfba7fd50607
 resourcetype: Image
 title: ga_fe.png
 uid: 513c00ff-c667-f8ca-ef14-9cb1db0b77a4

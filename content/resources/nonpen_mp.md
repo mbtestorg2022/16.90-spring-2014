@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 36e637ce-d6ff-e05d-3606-0d537611ad2e
 resourcetype: Image
 title: nonpen_mp.png
 uid: 77efec06-ade3-ce91-9e41-a7fca9df929c

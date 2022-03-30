@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 2bb791a5-f105-8421-b20e-147e46034287
 resourcetype: Image
 title: R_MWR.png
 uid: 230e1fbe-722a-155d-36a2-6dc508775fb4

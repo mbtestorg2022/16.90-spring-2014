@@ -10,6 +10,7 @@ image_metadata:
   credit: '[The Mapping Lab](http://mapping.mit.edu/)'
   image-alt: Diagram depicting a circle comprising 23 peripheral sections, white curved
     arrows connecting certain sections. Indistinguishable labels near each section.
+parent_uid: ef5333c4-caac-4b23-3599-e89e37e52fea
 resourcetype: Image
 title: xoces_large.png
 uid: be346f7e-4f47-00e3-9bb4-89c282323827

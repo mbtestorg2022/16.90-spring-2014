@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 998bd383-00b6-8dbd-2d38-c251f8262e37
 resourcetype: Image
 title: dif1d_ode45.png
 uid: 96daf9d7-94ec-9a99-cd50-ed8e56ce1c30

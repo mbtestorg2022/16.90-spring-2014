@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: ae250ef9-53d1-78da-8810-f88b0aaa6408
 resourcetype: Image
 title: ice_mp_smallDt.png
 uid: 415431b8-629e-b6a5-21b8-3d83f0b2d5ed

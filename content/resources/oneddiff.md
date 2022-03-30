@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 91200789-ca43-fa38-473a-bc690667c305
 resourcetype: Image
 title: oneddiff.png
 uid: 75ffae2c-9b44-67ac-9c7b-918a809c7347

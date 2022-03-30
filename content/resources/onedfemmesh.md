@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: cc8eecdb-7e89-e1db-ce16-2f90e5ff68fb
 resourcetype: Image
 title: onedFEMmesh.png
 uid: 407bbf27-5121-7447-8f12-9171055e98fc

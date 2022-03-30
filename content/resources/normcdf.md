@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 91c4e401-232c-3823-cf38-1f612b323bb6
 resourcetype: Image
 title: normcdf.png
 uid: 4bdf2791-cc81-bf80-4a0f-f3bf8725c090

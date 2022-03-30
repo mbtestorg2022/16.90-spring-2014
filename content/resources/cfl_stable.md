@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: cf738358-ae33-664a-5d71-baadd24f92cb
 resourcetype: Image
 title: CFL_stable.png
 uid: bb4dac45-da61-e3bd-d6e8-d0ec2adc6ba1

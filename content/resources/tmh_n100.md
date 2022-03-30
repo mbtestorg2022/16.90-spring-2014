@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 2ff49897-a168-59d4-5d17-feb89ff6fae6
 resourcetype: Image
 title: Tmh_N100.png
 uid: 6c76c91e-1dea-a929-8a3c-d41f939a10ac

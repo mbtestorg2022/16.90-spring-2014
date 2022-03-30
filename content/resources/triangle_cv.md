@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: d4283096-1401-99d2-0c85-a833f3518826
 resourcetype: Image
 title: triangle_cv.png
 uid: 46b2c91a-ffe1-8bda-bc3c-9637e97f1477

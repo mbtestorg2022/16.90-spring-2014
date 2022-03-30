@@ -8,6 +8,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 92531f3e-8a3e-cee6-6fe2-59f558861eb5
 resourcetype: Image
 title: 16-90-classroom
 uid: f08b9aa2-88e9-82cf-cc94-a27c57cd671c

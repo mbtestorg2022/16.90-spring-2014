@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: e6408661-a4be-8cfb-3204-ee1581c8dff1
 resourcetype: Image
 title: convdiffpe100.png
 uid: 15190016-438f-73a0-a57e-dc9c90a9cc06

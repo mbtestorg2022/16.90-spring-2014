@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 03bb574d-085a-6995-0b35-3c2a70257228
 resourcetype: Image
 title: linelem_sample.png
 uid: 323c3e91-af36-839b-9733-a3e877688b1f

@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: bda18124-71a5-87a7-513f-cb81480a1e18
 resourcetype: Image
 title: steady_dif1d_Texact.png
 uid: f90ed9a8-1faa-f78e-944f-e334d03d528a

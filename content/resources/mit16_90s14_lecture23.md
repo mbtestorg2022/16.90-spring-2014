@@ -3,6 +3,7 @@ content_type: resource
 description: This is a resource file that contains information regarding lecture 23.
 file: https://ol-ocw-studio-app-qa.s3.amazonaws.com/courses/16-90-computational-methods-in-aerospace-engineering-spring-2014/f0643d58972ed8a286737d21f187acfd_MIT16_90S14_Lecture23.pdf
 file_type: application/pdf
+parent_uid: 88a44a6b-ab5e-a4b6-5c5c-1379cb3476ce
 resourcetype: Document
 title: 'Lecture 23 Notes: Probabilistic Methods & Optimization: Intro to Optimization
   Methods'

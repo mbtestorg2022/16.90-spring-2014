@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 04ce95ca-3b3a-cc38-5d83-81923a3dd6fe
 resourcetype: Image
 title: nonpen_fe.png
 uid: dc33ef95-4ba0-0d2f-d80b-8e3cff99322b

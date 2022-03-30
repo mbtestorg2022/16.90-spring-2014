@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 935324e3-1ab2-cb57-9059-0ba1f034fcd5
 resourcetype: Image
 title: trap_stab.png
 uid: fbebc2ef-28a6-8b77-ed1c-3f50c18d74ab

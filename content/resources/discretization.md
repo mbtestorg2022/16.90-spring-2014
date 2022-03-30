@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 0baef83e-dfb4-b312-66ed-4f9fe5c876ba
 resourcetype: Image
 title: discretization.png
 uid: b427bd8c-9b82-4708-ff7a-f84a1dd2f56e

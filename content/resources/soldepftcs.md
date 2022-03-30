@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: ce70b6b2-dea9-62c9-1d8e-4789958e4499
 resourcetype: Image
 title: solDepFTCS.png
 uid: 6ae2bbcc-341c-d9f3-ea72-604dc4fdc5b6

@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 62673265-55df-f200-dae2-644697a179db
 resourcetype: Image
 title: N5_nq1.png
 uid: a09f0571-9f7d-a4ff-6865-9cbcfb0f9abb

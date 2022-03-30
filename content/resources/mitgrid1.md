@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 876be530-ac05-3384-5428-281b2b3c5b68
 resourcetype: Image
 title: MITgrid1.png
 uid: 2d58de59-b4a6-d363-d7fd-d31cdddc6461

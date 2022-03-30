@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: 2733fa33-374f-cb88-814c-413cb75b3483
 resourcetype: Image
 title: xiu_karniadakis_2003_pc_fluid_mechanics.png
 uid: b64f5d6e-363c-7c81-d034-d9b2ac56f6e7

@@ -43,8 +43,8 @@ Curriculum Information
 
 ### Prerequisites
 
-*   _[16.004 Unified Engineering](/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006/)_ or permission of the instructor
-*   Concurrent enrollment in _16.09 Statistics and Probability_ or _[6.041 Probabilistic Systems Analysis](/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/)_
+*   _[16.004 Unified Engineering](/courses/16-01-unified-engineering-i-ii-iii-iv-fall-2005-spring-2006)_ or permission of the instructor
+*   Concurrent enrollment in _16.09 Statistics and Probability_ or _[6.041 Probabilistic Systems Analysis](/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010)_
 
 ### Requirements Satisfied
 

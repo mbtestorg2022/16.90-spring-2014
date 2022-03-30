@@ -7,6 +7,7 @@ image_metadata:
   caption: ''
   credit: ''
   image-alt: ''
+parent_uid: bc0d43fe-1169-e2be-34aa-cfba7fd50607
 resourcetype: Image
 title: ga_mp.png
 uid: e035aa7a-569d-0554-9508-2a4e05636458
